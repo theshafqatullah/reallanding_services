@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import { useState } from "react";
+import { databases, DATABASE_ID, CONTACT_COLLECTION_ID, ID } from "@/lib/appwrite";
 
 const contactMethods = [
   {
@@ -41,6 +42,8 @@ const contactMethods = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   return (
     <div className="min-h-screen bg-white">
@@ -110,9 +113,32 @@ export default function ContactPage() {
             ) : (
               <form
                 className="mt-10 space-y-6"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  setSubmitted(true);
+                  setLoading(true);
+                  setError("");
+                  try {
+                    const form = e.currentTarget;
+                    const formData = new FormData(form);
+                    await databases.createDocument(
+                      DATABASE_ID,
+                      CONTACT_COLLECTION_ID,
+                      ID.unique(),
+                      {
+                        firstName: formData.get("firstName") as string,
+                        lastName: formData.get("lastName") as string,
+                        email: formData.get("email") as string,
+                        phone: (formData.get("phone") as string) || "",
+                        service: (formData.get("service") as string) || "",
+                        message: formData.get("message") as string,
+                      }
+                    );
+                    setSubmitted(true);
+                  } catch {
+                    setError("Something went wrong. Please try again.");
+                  } finally {
+                    setLoading(false);
+                  }
                 }}
               >
                 <div className="grid gap-6 sm:grid-cols-2">
@@ -120,6 +146,7 @@ export default function ContactPage() {
                     <label htmlFor="firstName" className="block text-sm font-medium text-zinc-700">First Name</label>
                     <input
                       id="firstName"
+                      name="firstName"
                       type="text"
                       required
                       className="mt-1.5 w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition"
@@ -130,6 +157,7 @@ export default function ContactPage() {
                     <label htmlFor="lastName" className="block text-sm font-medium text-zinc-700">Last Name</label>
                     <input
                       id="lastName"
+                      name="lastName"
                       type="text"
                       required
                       className="mt-1.5 w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition"
@@ -141,6 +169,7 @@ export default function ContactPage() {
                   <label htmlFor="email" className="block text-sm font-medium text-zinc-700">Email</label>
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     required
                     className="mt-1.5 w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition"
@@ -151,6 +180,7 @@ export default function ContactPage() {
                   <label htmlFor="phone" className="block text-sm font-medium text-zinc-700">Phone</label>
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
                     className="mt-1.5 w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition"
                     placeholder="+1 (555) 123-4567"
@@ -160,6 +190,7 @@ export default function ContactPage() {
                   <label htmlFor="service" className="block text-sm font-medium text-zinc-700">Service Interested In</label>
                   <select
                     id="service"
+                    name="service"
                     className="mt-1.5 w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm text-zinc-900 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition bg-white"
                   >
                     <option value="">Select a service</option>
@@ -180,20 +211,29 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-sm font-medium text-zinc-700">Message</label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     required
                     className="mt-1.5 w-full rounded-xl border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 focus:outline-none transition resize-none"
                     placeholder="Tell us about your business and goals..."
                   />
                 </div>
+                {error && (
+                  <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                    {error}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-full bg-green-600 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-green-700"
+                  disabled={loading}
+                  className="inline-flex items-center gap-2 rounded-full bg-green-600 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                  </svg>
+                  {loading ? "Sending..." : "Send Message"}
+                  {!loading && (
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+                  )}
                 </button>
               </form>
             )}

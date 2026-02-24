@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import NewsletterForm from "@/app/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Blog | RealLanding — Real Estate Marketing Insights",
@@ -209,16 +210,7 @@ export default function BlogPage() {
           <p className="mt-4 text-lg text-white/80">
             Join 5,000+ real estate professionals who receive our weekly insights.
           </p>
-          <div className="mx-auto mt-8 flex max-w-md gap-3">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 rounded-full border-0 px-5 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:ring-2 focus:ring-white/50 focus:outline-none"
-            />
-            <button className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-green-700 transition hover:bg-white/90">
-              Subscribe
-            </button>
-          </div>
+          <NewsletterForm source="blog" />
         </div>
       </section>
 
