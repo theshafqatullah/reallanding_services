@@ -1,0 +1,174 @@
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Email Marketing & Drip Campaigns | RealLanding Services",
+  description:
+    "Automated email sequences, investor nurturing systems, and newsletter campaigns for real estate professionals.",
+};
+
+const services = [
+  {
+    title: "Automated Email Sequences",
+    description:
+      "Pre-built drip campaigns that nurture leads automatically — from initial inquiry to property viewing to closing.",
+    icon: "📧",
+  },
+  {
+    title: "Investor Nurturing System",
+    description:
+      "Specialized email flows for real estate investors with market insights, deal alerts, and ROI projections.",
+    icon: "💎",
+  },
+  {
+    title: "Newsletter Campaigns",
+    description:
+      "Regular newsletters with market updates, new listings, and valuable content that keeps you top-of-mind.",
+    icon: "📰",
+  },
+];
+
+const process = [
+  {
+    step: "1",
+    title: "Audience Segmentation",
+    description:
+      "We segment your contacts by type — buyers, sellers, investors — for targeted messaging.",
+  },
+  {
+    step: "2",
+    title: "Sequence Design",
+    description:
+      "Custom email sequences are crafted with compelling copy, clear CTAs, and strategic timing.",
+  },
+  {
+    step: "3",
+    title: "Automation Setup",
+    description:
+      "Sequences are built in your email platform with triggers, conditions, and tracking.",
+  },
+  {
+    step: "4",
+    title: "Monitor & Improve",
+    description:
+      "Ongoing A/B testing, open rate optimization, and sequence refinement based on performance data.",
+  },
+];
+
+export default function EmailMarketingPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-rose-600 to-rose-800 pt-10 pb-24 text-white">
+        {/* Grid pattern overlay */}
+        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="flex flex-col items-center text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80 backdrop-blur-sm">
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+              RealLanding Services
+            </span>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              Email Marketing & Drip Campaigns
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
+              Nurture leads on autopilot with automated email sequences that move
+              prospects through your sales funnel.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-rose-700 transition hover:bg-white/90">
+                Get Started
+              </Link>
+              <Link href="/#services" className="rounded-full border border-white/25 px-7 py-3 text-sm font-medium text-white transition hover:bg-white/10">
+                All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="mx-auto max-w-6xl px-6 py-24">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
+            Email Services We Offer
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-zinc-500">
+            Automated email solutions to nurture and convert real estate leads.
+          </p>
+        </div>
+        <div className="mt-14 grid gap-8 sm:grid-cols-3">
+          {services.map((item) => (
+            <div
+              key={item.title}
+              className="group rounded-2xl border border-zinc-100 bg-white p-8 transition-all hover:border-rose-100"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-rose-50 text-2xl">
+                {item.icon}
+              </div>
+              <h3 className="mt-5 text-lg font-semibold text-zinc-900">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="border-t border-zinc-100 bg-zinc-50 py-24">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-zinc-900">
+            How It Works
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-zinc-500">
+            A simple, proven process to deliver results.
+          </p>
+          <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {process.map((item) => (
+              <div key={item.step} className="relative">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-rose-600 text-sm font-bold text-white">
+                  {item.step}
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-zinc-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-br from-rose-600 to-rose-700 py-20">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-3xl font-bold text-white">
+            Ready to nurture leads on autopilot?
+          </h2>
+          <p className="mt-4 text-lg text-white/80">
+            Set up email sequences that convert leads while you focus on
+            closing deals.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-rose-700 transition hover:bg-white/90"
+          >
+            Start Email Automation
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

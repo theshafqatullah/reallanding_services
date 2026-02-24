@@ -1,0 +1,179 @@
+import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Lead Generation System | RealLanding Services",
+  description:
+    "Buyer, seller, and investor lead generation with WhatsApp & call integration, appointment automation, and funnel strategy.",
+};
+
+const services = [
+  {
+    title: "Buyer & Seller Lead Campaigns",
+    description:
+      "Targeted campaigns across multiple channels to generate qualified buyer and seller leads in your market.",
+    icon: "🏠",
+  },
+  {
+    title: "Investor Funnel Strategy",
+    description:
+      "Specialized funnels designed to attract and qualify high-ticket real estate investors.",
+    icon: "💰",
+  },
+  {
+    title: "WhatsApp & Call Integration",
+    description:
+      "Instant lead capture through WhatsApp messaging and click-to-call integrations for immediate response.",
+    icon: "📞",
+  },
+  {
+    title: "Appointment Automation",
+    description:
+      "Automated scheduling systems that book property viewings and consultations without manual intervention.",
+    icon: "📅",
+  },
+];
+
+const process = [
+  {
+    step: "1",
+    title: "Lead Strategy Design",
+    description:
+      "We map your ideal client profile and design multi-channel lead generation campaigns.",
+  },
+  {
+    step: "2",
+    title: "Funnel Build-Out",
+    description:
+      "Landing pages, forms, and automation workflows are built and integrated with your systems.",
+  },
+  {
+    step: "3",
+    title: "Campaign Launch",
+    description:
+      "Campaigns go live across paid, organic, and direct channels to drive qualified leads.",
+  },
+  {
+    step: "4",
+    title: "Optimize & Scale",
+    description:
+      "Continuous optimization of cost-per-lead, lead quality, and volume to maximize ROI.",
+  },
+];
+
+export default function LeadGenerationPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-800 pt-10 pb-24 text-white">
+        <div className="pointer-events-none absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <div className="flex flex-col items-center text-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80 backdrop-blur-sm">
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+              RealLanding Services
+            </span>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              Lead Generation System
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
+              Generate a consistent flow of qualified buyer, seller, and investor
+              leads with our proven systems.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="rounded-full bg-white px-7 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-white/90">
+                Get Started
+              </Link>
+              <Link href="/#services" className="rounded-full border border-white/25 px-7 py-3 text-sm font-medium text-white transition hover:bg-white/10">
+                All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="mx-auto max-w-6xl px-6 py-24">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-900">
+            Lead Generation Services
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-zinc-500">
+            Multi-channel lead generation systems built for real estate growth.
+          </p>
+        </div>
+        <div className="mt-14 grid gap-8 sm:grid-cols-2">
+          {services.map((item) => (
+            <div
+              key={item.title}
+              className="group rounded-2xl border border-zinc-100 bg-white p-8 transition-all hover:border-emerald-100"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-2xl">
+                {item.icon}
+              </div>
+              <h3 className="mt-5 text-lg font-semibold text-zinc-900">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="border-t border-zinc-100 bg-zinc-50 py-24">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2 className="text-center text-3xl font-bold tracking-tight text-zinc-900">
+            How It Works
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-center text-zinc-500">
+            A simple, proven process to deliver results.
+          </p>
+          <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {process.map((item) => (
+              <div key={item.step} className="relative">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-600 text-sm font-bold text-white">
+                  {item.step}
+                </div>
+                <h3 className="mt-4 text-base font-semibold text-zinc-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-gradient-to-br from-emerald-600 to-emerald-700 py-20">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-3xl font-bold text-white">
+            Ready to fill your pipeline?
+          </h2>
+          <p className="mt-4 text-lg text-white/80">
+            Start generating qualified leads on autopilot with our proven
+            systems.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-emerald-700 transition hover:bg-white/90"
+          >
+            Start Generating Leads
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

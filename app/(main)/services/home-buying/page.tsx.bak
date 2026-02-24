@@ -1,0 +1,136 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home Buying Assistance | RealLanding Services",
+  description:
+    "Expert home buying assistance — from neighborhood research and property tours to negotiation and closing.",
+};
+
+const steps = [
+  {
+    step: "01",
+    title: "Consultation & Pre-Approval",
+    description:
+      "We start with a one-on-one consultation to understand your goals, budget, and lifestyle. We then connect you with trusted lenders to secure mortgage pre-approval.",
+  },
+  {
+    step: "02",
+    title: "Property Search & Tours",
+    description:
+      "Using our extensive MLS access and off-market connections, we curate listings that match your criteria and arrange private showings at your convenience.",
+  },
+  {
+    step: "03",
+    title: "Market Analysis & Offer Strategy",
+    description:
+      "We prepare a comparative market analysis for every property you're interested in, then craft a competitive offer strategy tailored to current market conditions.",
+  },
+  {
+    step: "04",
+    title: "Negotiation & Inspection",
+    description:
+      "Our agents negotiate on your behalf to secure the best price and terms. We coordinate professional home inspections and help you navigate repair requests.",
+  },
+  {
+    step: "05",
+    title: "Closing & Move-In",
+    description:
+      "We guide you through every document, deadline, and detail of the closing process — and hand you the keys to your new home.",
+  },
+];
+
+const stats = [
+  { value: "2,500+", label: "Homes Sold" },
+  { value: "98%", label: "Client Satisfaction" },
+  { value: "15+", label: "Years of Experience" },
+  { value: "30", label: "Days Avg. Close Time" },
+];
+
+export default function HomeBuyingPage() {
+  return (
+    <div className="min-h-screen bg-zinc-50 dark:bg-black">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-800 py-24 text-white">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-emerald-200">
+            Our Services
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            Home Buying Assistance
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-emerald-100">
+            Finding your dream home shouldn&rsquo;t feel overwhelming. Our
+            experienced agents guide you every step of the way — from first
+            search to final closing.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/services"
+              className="rounded-full border border-white/30 px-6 py-3 text-sm font-medium transition hover:bg-white/10"
+            >
+              ← All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="border-b border-zinc-200 dark:border-zinc-800">
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 px-6 py-12 sm:grid-cols-4">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <p className="text-3xl font-bold text-emerald-600">{stat.value}</p>
+              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Process Steps */}
+      <section className="mx-auto max-w-4xl px-6 py-20">
+        <h2 className="text-center text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+          Our Home Buying Process
+        </h2>
+        <div className="mt-14 space-y-12">
+          {steps.map((item) => (
+            <div key={item.step} className="flex gap-6">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-lg font-bold text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300">
+                {item.step}
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-zinc-100 py-16 dark:bg-zinc-900">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+            Start your home search today
+          </h2>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+            Schedule a free buyer consultation and let us help you find the
+            perfect home.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-emerald-600 px-8 py-3 text-sm font-medium text-white transition hover:bg-emerald-700"
+          >
+            Book a Consultation
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}

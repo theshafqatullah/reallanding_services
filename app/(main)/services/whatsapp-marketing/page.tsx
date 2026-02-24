@@ -1,0 +1,283 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+
+export const metadata: Metadata = {
+  title: "WhatsApp Marketing for Real Estate | RealLanding",
+  description:
+    "WhatsApp Business API marketing for real estate — broadcast campaigns, automated chatbots, CRM integration, listing alerts, and client communication that drives engagement and closings.",
+};
+
+const stats = [
+  { value: "98%", label: "Message Open Rate" },
+  { value: "45%", label: "Response Rate" },
+  { value: "3.8×", label: "More Engagement vs Email" },
+  { value: "10,000+", label: "Messages Monthly" },
+];
+
+const services = [
+  { icon: "📲", title: "WhatsApp Business API Setup", description: "Full setup and verification of your WhatsApp Business API account — including business profile optimization, green badge verification, and compliance configuration. We handle the technical integration so you can start messaging at scale from day one." },
+  { icon: "📢", title: "Broadcast Campaigns & Lists", description: "Reach hundreds or thousands of prospects simultaneously with targeted broadcast messages — new listings, open house invitations, market updates, and price reductions. We segment your audience by buyer type, location, budget, and engagement history for maximum relevance." },
+  { icon: "🤖", title: "Automated Chatbot Flows", description: "24/7 intelligent chatbot flows that qualify leads, answer common questions, schedule showings, and collect contact information — all within WhatsApp. Buyers get instant responses while you focus on closings, not repetitive conversations." },
+  { icon: "🔗", title: "CRM & Lead Integration", description: "Every WhatsApp conversation syncs directly with your CRM — lead details, chat history, property interests, and follow-up tasks are automatically logged. No manual data entry, no leads falling through the cracks between platforms." },
+  { icon: "🏠", title: "Listing Alert Automation", description: "Automated listing alerts sent via WhatsApp the moment a matching property hits the market. Buyers receive rich media messages with photos, pricing, and one-tap links to schedule a tour — delivered where they&apos;re already spending 30+ minutes per day." },
+  { icon: "💬", title: "Client Communication & Follow-Up", description: "Structured follow-up sequences for every stage of the client journey — from initial inquiry to post-closing check-in. Drip campaigns, anniversary messages, and review requests keep you top-of-mind and generate referrals on autopilot." },
+];
+
+const steps = [
+  { step: 1, title: "Strategy & Setup", description: "We audit your current communication channels, define your WhatsApp marketing strategy, segment your audience, and set measurable KPIs for open rates, response rates, and lead conversion." },
+  { step: 2, title: "API Configuration", description: "Full WhatsApp Business API setup — account verification, business profile creation, webhook integration with your CRM, and compliance configuration to meet Meta&apos;s messaging policies." },
+  { step: 3, title: "Content & Templates", description: "We craft pre-approved message templates for listings, follow-ups, open houses, market updates, and nurture sequences — all optimized for engagement and compliant with WhatsApp&apos;s template approval process." },
+  { step: 4, title: "Automation Build", description: "We build chatbot flows, listing alert triggers, broadcast segmentation rules, and CRM sync automations — creating a fully hands-free communication engine that runs 24/7." },
+  { step: 5, title: "Launch & Optimize", description: "Campaigns go live with real-time monitoring. We track open rates, response rates, and lead quality, then continuously A/B test message timing, content, and audience segments to maximize ROI." },
+];
+
+const benefits = [
+  { title: "Unmatched Open Rates", desc: "WhatsApp messages achieve 98% open rates compared to 20–25% for email. Your listings, updates, and follow-ups are actually seen — not buried in a spam folder or ignored inbox." },
+  { title: "Instant Two-Way Communication", desc: "Unlike email or SMS blasts, WhatsApp enables real conversations. Buyers can reply instantly, ask questions, request photos, and schedule showings — all in a single thread you can track." },
+  { title: "Rich Media Messages", desc: "Send property photos, virtual tour videos, location pins, PDF brochures, and interactive buttons — all within WhatsApp. Listings come alive in a way that plain text emails and SMS can&apos;t match." },
+  { title: "Global Reach & Familiarity", desc: "WhatsApp has 2+ billion users worldwide — and it&apos;s the primary messaging app in many US markets with international buyers. Meet clients where they already communicate, not where you wish they would." },
+  { title: "Automated & Scalable", desc: "Chatbots handle initial qualification, FAQs, and scheduling while broadcast campaigns reach thousands at once. Scale your communication without scaling your team or your hours." },
+  { title: "CRM-Connected Intelligence", desc: "Every message, response, and interaction feeds directly into your CRM — giving you a complete picture of each lead&apos;s engagement history and enabling intelligent, personalized follow-up at scale." },
+];
+
+const results = [
+  { metric: "98%", label: "Average message open rate", period: "Across all client campaigns" },
+  { metric: "45%", label: "Average response rate", period: "vs 2–5% for email campaigns" },
+  { metric: "3.8×", label: "More engagement than email", period: "Measured by reply rate" },
+  { metric: "22%", label: "Lead-to-showing conversion", period: "From WhatsApp conversations" },
+];
+
+const testimonials = [
+  { quote: "I work a lot with international buyers relocating to Miami, and WhatsApp is how they communicate — period. RealLanding set up automated listing alerts, a chatbot that qualifies buyers in Spanish and English, and broadcast campaigns for new developments. My response rate went from 3% with email to 48% on WhatsApp. I closed $4.2M in my first quarter using it.", author: "Alejandra Reyes", role: "Luxury Agent, Miami Beach FL" },
+  { quote: "We were skeptical about WhatsApp marketing until RealLanding showed us the data. Now we send open house invitations, just-listed alerts, and market updates to segmented lists — and the engagement is insane. We had 34 showing requests from a single broadcast message for a new listing. Our email campaigns never came close to that.", author: "Derek Washington", role: "Team Lead, Washington & Partners, Houston TX" },
+];
+
+const faqs = [
+  { question: "What's the difference between WhatsApp Business API and regular WhatsApp Business?", answer: "The free WhatsApp Business app is designed for small businesses and limits you to manual, one-at-a-time messaging from a single phone. The WhatsApp Business API is an enterprise solution that enables automated messages, broadcast campaigns to thousands, chatbot integration, CRM syncing, and multi-agent access — all essential for scaling real estate communication." },
+  { question: "Is WhatsApp marketing compliant with regulations?", answer: "Yes — when done correctly. We ensure full compliance with Meta's WhatsApp Business Policy, which requires opt-in consent before messaging, approved message templates for outbound campaigns, and clear opt-out mechanisms. We handle the compliance setup so you can message confidently without risking account suspension." },
+  { question: "How much does WhatsApp marketing cost?", answer: "Our WhatsApp marketing packages start at $1,200/month including API fees, campaign management, chatbot setup, and CRM integration. WhatsApp Business API charges per-conversation fees (typically $0.02–$0.08 per conversation depending on category), which are billed separately. We'll estimate total costs during your consultation." },
+  { question: "Are there message limits on WhatsApp Business API?", answer: "New API accounts start with a messaging limit of 1,000 unique contacts per 24 hours. As your account quality rating improves, this increases to 10,000 and eventually 100,000+ contacts per day. We manage your account health to ensure rapid tier upgrades and uninterrupted campaign delivery." },
+  { question: "How does the template approval process work?", answer: "WhatsApp requires pre-approval for outbound message templates (business-initiated messages). We write and submit templates optimized for approval — typically receiving approval within 24–48 hours. Once approved, templates can be used indefinitely. Replies within a 24-hour window allow free-form messaging without template restrictions." },
+  { question: "Can WhatsApp integrate with my existing CRM?", answer: "Yes — we integrate WhatsApp Business API with all major real estate CRMs including Follow Up Boss, KvCORE, Sierra Interactive, LionDesk, HubSpot, and Salesforce. Conversations, lead data, and engagement history sync automatically so your team has full context in one place." },
+];
+
+const relatedServices = [
+  { title: "Email Marketing", href: "/services/email-marketing", description: "Complement your WhatsApp campaigns with targeted email sequences for long-form content, market reports, and newsletter-style nurture." },
+  { title: "CRM & Sales Automation", href: "/services/crm-sales-automation", description: "Ensure every WhatsApp lead is automatically logged, tagged, and routed through your CRM with intelligent follow-up workflows." },
+  { title: "AI Automation", href: "/services/ai-automation", description: "Power your WhatsApp chatbots with AI-driven conversation flows that qualify leads and book appointments automatically." },
+];
+
+export default function WhatsAppMarketingPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-emerald-400/20 blur-3xl" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <nav className="flex justify-center mb-6 text-green-200 text-sm">
+            <Link href="/" className="hover:text-white transition">Home</Link>
+            <span className="mx-2">/</span>
+            <Link href="/#services" className="hover:text-white transition">Services</Link>
+            <span className="mx-2">/</span>
+            <span className="text-white font-medium">WhatsApp Marketing</span>
+          </nav>
+          <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-5 py-2 rounded-full mb-6 border border-white/20">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>
+            WhatsApp Marketing for Real Estate
+          </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Reach Buyers &amp; Sellers Where<br className="hidden md:block" /> They Actually Read Messages</h1>
+          <p className="text-xl text-green-100 max-w-3xl mx-auto mb-10 leading-relaxed">98% open rates. 45% response rates. WhatsApp Business API marketing built for real estate — automated chatbots, broadcast campaigns, listing alerts, and CRM-connected follow-up that drives real engagement.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg shadow-green-900/20 hover:shadow-xl hover:-translate-y-0.5">Get Your Free WhatsApp Strategy</Link>
+            <Link href="/contact" className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all backdrop-blur-sm">See Our Results</Link>
+          </div>
+          <p className="mt-6 text-green-200/70 text-sm">10,000+ messages delivered monthly for real estate clients</p>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {stats.map((stat, i) => (
+            <div key={i} className="bg-white rounded-2xl p-6 text-center shadow-lg shadow-gray-200/50 border border-gray-100 hover:shadow-xl transition-shadow">
+              <div className="text-3xl md:text-4xl font-bold text-green-600 mb-1">{stat.value}</div>
+              <div className="text-gray-500 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Trust Bar */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-400">
+          {["Official WhatsApp API Partner", "Fully Compliant Messaging", "CRM Auto-Sync", "24/7 Chatbot Automation"].map((item, i) => (
+            <span key={i} className="flex items-center gap-2"><svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg> {item}</span>
+          ))}
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Our Solutions</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">Complete WhatsApp Marketing Suite</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">From API setup to automated chatbots and broadcast campaigns — everything you need to turn WhatsApp into your highest-engagement marketing channel.</p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((s, i) => (
+            <div key={i} className="group bg-white border border-gray-100 rounded-2xl p-8 hover:border-green-200 hover:shadow-lg hover:shadow-green-100/50 transition-all duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition-transform duration-300">{s.icon}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{s.title}</h3>
+              <p className="text-gray-500 leading-relaxed text-[15px]">{s.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Results Showcase */}
+      <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-green-400 font-semibold text-sm uppercase tracking-wider">Proven Results</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4">WhatsApp Marketing Performance</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">Real engagement metrics from real estate professionals using our WhatsApp marketing systems.</p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {results.map((r, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-colors">
+                <div className="text-4xl font-bold text-green-400 mb-2">{r.metric}</div>
+                <div className="text-white font-medium mb-1">{r.label}</div>
+                <div className="text-gray-500 text-sm">{r.period}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">WhatsApp Marketing That Drives Real Conversations</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">Stop shouting into the void with emails no one reads. Start conversations on the platform your clients check 80+ times a day.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((b, i) => (
+              <div key={i} className="bg-green-50/50 border border-green-100 rounded-2xl p-6 hover:bg-green-50 transition-colors">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                  <h3 className="font-bold text-gray-900">{b.title}</h3>
+                </div>
+                <p className="text-gray-500 text-[15px] leading-relaxed pl-11">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-gray-50 border-y border-gray-100 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">What Agents &amp; Teams Say</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {testimonials.map((t, i) => (
+              <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 relative">
+                <svg className="absolute top-6 right-8 w-12 h-12 text-green-100" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z" /></svg>
+                <div className="flex gap-1 mb-4">{[...Array(5)].map((_, j) => <svg key={j} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}</div>
+                <p className="text-gray-600 leading-relaxed mb-6 relative z-10">&ldquo;{t.quote}&rdquo;</p>
+                <div><div className="font-bold text-gray-900">{t.author}</div><div className="text-green-600 text-sm">{t.role}</div></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Our Process</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">From Setup to Scale in Five Steps</h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">A structured process that gets your WhatsApp marketing live fast — with the automation and compliance framework to scale confidently.</p>
+        </div>
+        <div className="relative">
+          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-200" />
+          <div className="grid md:grid-cols-5 gap-8">
+            {steps.map((s) => (
+              <div key={s.step} className="text-center relative">
+                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4 relative z-10 shadow-lg shadow-green-200">{s.step}</div>
+                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{s.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-gray-50 border-y border-gray-100 py-24">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">FAQ</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Common Questions About WhatsApp Marketing</h2>
+          </div>
+          <div className="space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="group bg-white rounded-2xl border border-gray-100 hover:border-green-200 transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-gray-900 [&::-webkit-details-marker]:hidden">
+                  {faq.question}
+                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                </summary>
+                <div className="px-6 pb-6 -mt-2"><p className="text-gray-500 leading-relaxed">{faq.answer}</p></div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Related Services</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Amplify Your Messaging Strategy</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {relatedServices.map((rs, i) => (
+              <Link key={i} href={rs.href} className="group bg-white border border-gray-100 rounded-2xl p-8 hover:border-green-200 hover:shadow-lg hover:shadow-green-50 transition-all block">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">{rs.title}</h3>
+                <p className="text-gray-500 leading-relaxed mb-4">{rs.description}</p>
+                <span className="text-green-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 py-24">
+        <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-emerald-400/20 blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Turn WhatsApp into Your #1 Engagement Channel?</h2>
+          <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">Book a free WhatsApp marketing strategy session. We&apos;ll evaluate your audience, design your chatbot flows, and map out a campaign plan that delivers 98% open rates and real conversations.</p>
+          <Link href="/contact" className="inline-block bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg shadow-green-900/20 hover:shadow-xl hover:-translate-y-0.5">Get Your Free WhatsApp Strategy</Link>
+          <p className="mt-6 text-green-200/60 text-sm">Includes a custom chatbot flow mockup and campaign roadmap</p>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

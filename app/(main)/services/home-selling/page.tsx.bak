@@ -1,0 +1,160 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home Selling Services | RealLanding Services",
+  description:
+    "Sell your home faster and for top dollar — professional staging, marketing, pricing strategy, and expert negotiation.",
+};
+
+const services = [
+  {
+    title: "Pricing Strategy",
+    description:
+      "Data-driven comparative market analysis to price your home competitively from day one, maximizing interest and offers.",
+    icon: "📈",
+  },
+  {
+    title: "Professional Staging",
+    description:
+      "Our staging experts transform your home to highlight its best features, creating an irresistible first impression for buyers.",
+    icon: "🛋️",
+  },
+  {
+    title: "Photography & Video",
+    description:
+      "HDR photography, drone aerials, 3D virtual tours, and cinematic video walkthroughs to showcase your property online.",
+    icon: "📸",
+  },
+  {
+    title: "Multi-Channel Marketing",
+    description:
+      "Your listing reaches thousands through MLS syndication, social media campaigns, email blasts, and targeted digital ads.",
+    icon: "📣",
+  },
+  {
+    title: "Open Houses & Showings",
+    description:
+      "We coordinate and host open houses, broker tours, and private showings to generate maximum exposure and offers.",
+    icon: "🏡",
+  },
+  {
+    title: "Negotiation & Closing",
+    description:
+      "Skilled negotiation to secure the best price and terms, plus full transaction management through a smooth closing.",
+    icon: "🤝",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "They sold our home in just 5 days, $30K over asking. The marketing was absolutely incredible.",
+    author: "Sarah & James T.",
+    location: "Austin, TX",
+  },
+  {
+    quote:
+      "From staging to closing, every detail was handled professionally. We couldn't have asked for a better experience.",
+    author: "Michael R.",
+    location: "Denver, CO",
+  },
+];
+
+export default function HomeSellingPage() {
+  return (
+    <div className="min-h-screen bg-zinc-50 dark:bg-black">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700 py-24 text-white">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-orange-200">
+            Our Services
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            Home Selling Services
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-orange-100">
+            Sell smarter, not harder. Our proven marketing system and expert
+            agents ensure your home sells quickly and for the best possible
+            price.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/services"
+              className="rounded-full border border-white/30 px-6 py-3 text-sm font-medium transition hover:bg-white/10"
+            >
+              ← All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <h2 className="text-center text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+          Our Selling Toolkit
+        </h2>
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((svc) => (
+            <div
+              key={svc.title}
+              className="rounded-2xl border border-zinc-200 bg-white p-6 transition dark:border-zinc-800 dark:bg-zinc-900"
+            >
+              <span className="text-3xl">{svc.icon}</span>
+              <h3 className="mt-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                {svc.title}
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                {svc.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-zinc-100 py-16 dark:bg-zinc-900">
+        <div className="mx-auto max-w-4xl px-6">
+          <h2 className="text-center text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+            What Our Sellers Say
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-2">
+            {testimonials.map((t) => (
+              <blockquote
+                key={t.author}
+                className="rounded-2xl bg-white p-6 dark:bg-zinc-800"
+              >
+                <p className="text-sm italic leading-6 text-zinc-700 dark:text-zinc-300">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <footer className="mt-4 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                  — {t.author},{" "}
+                  <span className="font-normal text-zinc-500">{t.location}</span>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+            Thinking about selling?
+          </h2>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+            Get a free home valuation and learn what your property is worth in
+            today&rsquo;s market.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-orange-600 px-8 py-3 text-sm font-medium text-white transition hover:bg-orange-700"
+          >
+            Get a Free Valuation
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
