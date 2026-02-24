@@ -48,12 +48,12 @@ const careersJsonLd = {
 };
 
 const perks = [
-  { icon: "🏠", title: "Remote-First", desc: "Work from anywhere. We're a fully distributed team across multiple time zones." },
-  { icon: "📈", title: "Growth Culture", desc: "Continuous learning budget, mentorship, and clear career advancement paths." },
-  { icon: "💰", title: "Competitive Pay", desc: "Above-market compensation with performance bonuses and equity options." },
-  { icon: "🏥", title: "Health & Wellness", desc: "Comprehensive health insurance, mental health support, and gym stipend." },
-  { icon: "🌴", title: "Unlimited PTO", desc: "Take the time you need. We trust you to manage your schedule responsibly." },
-  { icon: "🛠️", title: "Best Tools", desc: "Latest hardware and software — we invest in the tools you need to do your best work." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>), title: "Remote-First", desc: "Work from anywhere. We're a fully distributed team across multiple time zones." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>), title: "Growth Culture", desc: "Continuous learning budget, mentorship, and clear career advancement paths." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>), title: "Competitive Pay", desc: "Above-market compensation with performance bonuses and equity options." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>), title: "Health & Wellness", desc: "Comprehensive health insurance, mental health support, and gym stipend." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>), title: "Unlimited PTO", desc: "Take the time you need. We trust you to manage your schedule responsibly." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.66 5.66a2.25 2.25 0 01-3.182-3.182l5.66-5.66m3.182 3.182l.707-.707a2.25 2.25 0 000-3.182L8.485 6.702a8.25 8.25 0 0010.607 0l3.182 3.182a2.25 2.25 0 010 3.182l-.707.707M3.75 21h16.5" /></svg>), title: "Best Tools", desc: "Latest hardware and software — we invest in the tools you need to do your best work." },
 ];
 
 const openings = [
@@ -154,7 +154,7 @@ export default function CareersPage() {
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {perks.map((p) => (
             <div key={p.title} className="rounded-2xl border border-zinc-100 bg-white p-6 transition hover:border-green-100">
-              <div className="text-2xl">{p.icon}</div>
+              <div className="text-green-600">{p.icon}</div>
               <h3 className="mt-4 text-base font-semibold text-zinc-900">{p.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-zinc-500">{p.desc}</p>
             </div>
