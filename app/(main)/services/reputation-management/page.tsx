@@ -52,7 +52,7 @@ const jsonLd = {
 
 
 const stats = [
-  { value: "4.8★", label: "Average Client Rating" },
+  { value: (<>4.8<svg className="inline-block w-5 h-5 text-yellow-400 ml-0.5 -mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg></>), label: "Average Client Rating" },
   { value: "340%", label: "More Reviews Generated" },
   { value: "92%", label: "Negative Review Resolution" },
   { value: "500+", label: "Agents Protected" },
@@ -85,7 +85,7 @@ const benefits = [
 ];
 
 const results = [
-  { metric: "4.8★", label: "Average client star rating", period: "Across all managed profiles" },
+  { metric: (<>4.8<svg className="inline-block w-5 h-5 text-yellow-400 ml-0.5 -mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg></>), label: "Average client star rating", period: "Across all managed profiles" },
   { metric: "340%", label: "Increase in review volume", period: "Within first 6 months" },
   { metric: "92%", label: "Negative review resolution", period: "Resolved or removed" },
   { metric: "500+", label: "Agents & teams protected", period: "Reputation managed nationwide" },

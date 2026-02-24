@@ -39,7 +39,7 @@ export default function NewsletterForm({ source = "blog" }: { source?: string })
   if (status === "success") {
     return (
       <div className="mx-auto mt-8 max-w-md rounded-full bg-white/10 px-6 py-3 text-center text-sm font-medium text-white backdrop-blur-sm">
-        ✓ You&apos;re subscribed! Check your inbox for our next newsletter.
+        <svg className="inline-block w-4 h-4 mr-1 -mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>You&apos;re subscribed! Check your inbox for our next newsletter.
       </div>
     );
   }
