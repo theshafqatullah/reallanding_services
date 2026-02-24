@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: "SEO for Real Estate | RealLanding",
   description:
     "Dominate local and organic search results with real estate SEO strategies that drive qualified buyer and seller traffic to your website — month after month.",
-};
   openGraph: {
     title: "SEO for Real Estate | RealLanding",
     description:
@@ -116,10 +115,10 @@ export default function SEOPage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-teal-800 pt-32 pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-pink-600 via-rose-700 to-pink-900 pt-32 pb-28">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
-        <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-teal-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-pink-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-rose-400/20 blur-3xl" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <nav className="flex justify-center mb-6 text-green-200 text-sm">
             <Link href="/" className="hover:text-white transition">Home</Link>
@@ -183,7 +182,7 @@ export default function SEOPage() {
       </section>
 
       {/* Results Showcase */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 py-24">
+      <section className="bg-gradient-to-br from-pink-900 to-rose-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-green-400 font-semibold text-sm uppercase tracking-wider">Proven Results</span>
@@ -227,7 +226,7 @@ export default function SEOPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 border-y border-gray-100 py-24">
+      <section className="bg-pink-50 border-y border-pink-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
@@ -341,7 +340,7 @@ export default function SEOPage() {
       </section>
 
       {/* Related Services */}
-      <section className="bg-gray-50 border-t border-gray-100 py-24">
+      <section className="bg-pink-50 border-t border-pink-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Related Services</span>
@@ -360,7 +359,9 @@ export default function SEOPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-teal-800 py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-pink-600 via-rose-700 to-pink-900 py-24">
+        <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-pink-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-rose-400/20 blur-3xl" />
         <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
