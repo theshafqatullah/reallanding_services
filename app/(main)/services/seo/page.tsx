@@ -115,10 +115,10 @@ export default function SEOPage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-pink-600 via-rose-700 to-pink-900 pt-32 pb-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
-        <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-pink-400/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-rose-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full bg-green-400/20 blur-3xl" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <nav className="flex justify-center mb-6 text-green-200 text-sm">
             <Link href="/" className="hover:text-white transition">Home</Link>
@@ -182,7 +182,7 @@ export default function SEOPage() {
       </section>
 
       {/* Results Showcase */}
-      <section className="bg-gradient-to-br from-pink-900 to-rose-800 py-24">
+      <section className="bg-gradient-to-br from-green-900 to-green-800 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-green-400 font-semibold text-sm uppercase tracking-wider">Proven Results</span>
@@ -226,7 +226,7 @@ export default function SEOPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-pink-50 border-y border-pink-100 py-24">
+      <section className="bg-green-50 border-y border-green-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
@@ -236,7 +236,7 @@ export default function SEOPage() {
             {testimonials.map((t, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 relative">
                 <svg className="absolute top-6 right-8 w-12 h-12 text-green-100" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z" /></svg>
-                <div className="flex gap-1 mb-4">{[...Array(5)].map((_, j) => <svg key={j} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}</div>
+                <div className="flex gap-1 mb-4">{[...Array(5)].map((_, j) => <svg key={j} className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}</div>
                 <p className="text-gray-600 leading-relaxed mb-6 relative z-10">&ldquo;{t.quote}&rdquo;</p>
                 <div>
                   <div className="font-bold text-gray-900">{t.author}</div>
@@ -256,7 +256,7 @@ export default function SEOPage() {
           <p className="text-gray-500 max-w-2xl mx-auto">A proven, repeatable methodology that consistently delivers results for real estate businesses of every size.</p>
         </div>
         <div className="relative">
-          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-200" />
+          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-green-200 via-emerald-400 to-green-200" />
           <div className="grid md:grid-cols-5 gap-8">
             {steps.map((s) => (
               <div key={s.step} className="text-center relative">
@@ -326,12 +326,6 @@ export default function SEOPage() {
                 </summary>
                 <div className="px-6 pb-6 -mt-2">
                   <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
-                    {/* SEO Structured Data */}
-                    <script
-                      type="application/ld+json"
-                      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-                      key="structured-data"
-                    />
                 </div>
               </details>
             ))}
@@ -340,7 +334,7 @@ export default function SEOPage() {
       </section>
 
       {/* Related Services */}
-      <section className="bg-pink-50 border-t border-pink-100 py-24">
+      <section className="bg-green-50 border-t border-green-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">Related Services</span>
@@ -359,11 +353,9 @@ export default function SEOPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-pink-600 via-rose-700 to-pink-900 py-24">
-        <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-pink-400/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-rose-400/20 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 py-24">
         <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-teal-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-green-400/20 blur-3xl" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Own Page One in Your Market?</h2>
           <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">Book a free SEO audit and discover exactly how much organic traffic and leads you&apos;re leaving on the table — and the step-by-step plan to capture them.</p>
