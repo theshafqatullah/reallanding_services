@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Lead Generation for Real Estate | RealLanding",
   description:
     "Multi-channel lead generation for real estate agents and teams. Facebook & Instagram lead ads, Google PPC, SEO leads, home valuation pages, IDX capture, and referral campaigns.",
+  openGraph: {
+    title: "Lead Generation for Real Estate | RealLanding",
+    description:
+      "Multi-channel lead generation for real estate agents and teams. Facebook & Instagram lead ads, Google PPC, SEO leads, home valuation pages, IDX capture, and referral campaigns.",
+    url: "https://reallanding.com/services/lead-generation",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-lead-generation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lead Generation for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lead Generation for Real Estate | RealLanding",
+    description:
+      "Multi-channel lead generation for real estate agents and teams. Facebook & Instagram lead ads, Google PPC, SEO leads, home valuation pages, IDX capture, and referral campaigns.",
+    images: ["https://reallanding.com/og-lead-generation.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Lead Generation",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Multi-channel lead generation for real estate agents and teams. Facebook & Instagram lead ads, Google PPC, SEO leads, home valuation pages, IDX capture, and referral campaigns.",
+  "url": "https://reallanding.com/services/lead-generation",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "50,000+", label: "Leads Generated" },
@@ -73,6 +115,12 @@ export default function LeadGenerationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

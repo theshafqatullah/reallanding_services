@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Reputation Management for Real Estate | RealLanding",
   description:
     "Online reputation management for real estate professionals — review generation, monitoring, negative review resolution, Google Business Profile optimization, and social proof marketing.",
+  openGraph: {
+    title: "Reputation Management for Real Estate | RealLanding",
+    description:
+      "Online reputation management for real estate professionals — review generation, monitoring, negative review resolution, Google Business Profile optimization, and social proof marketing.",
+    url: "https://reallanding.com/services/reputation-management",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-reputation-management.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Reputation Management for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reputation Management for Real Estate | RealLanding",
+    description:
+      "Online reputation management for real estate professionals — review generation, monitoring, negative review resolution, Google Business Profile optimization, and social proof marketing.",
+    images: ["https://reallanding.com/og-reputation-management.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Reputation Management",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Online reputation management for real estate professionals — review generation, monitoring, negative review resolution, Google Business Profile optimization, and social proof marketing.",
+  "url": "https://reallanding.com/services/reputation-management",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "4.8★", label: "Average Client Rating" },
@@ -73,6 +115,12 @@ export default function ReputationManagementPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

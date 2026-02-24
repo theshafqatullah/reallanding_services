@@ -1,6 +1,68 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import Header from "@/app/components/Header";
+
+export const metadata: Metadata = {
+  title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+  description:
+    "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+  openGraph: {
+    title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+    description:
+      "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+    url: "https://reallanding.com",
+    type: "website",
+    siteName: "RealLanding",
+    images: [
+      {
+        url: "https://reallanding.com/og-homepage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RealLanding — Real Estate Marketing Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+    description:
+      "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+    images: ["https://reallanding.com/og-homepage.jpg"],
+    site: "@RealLandingHQ",
+  },
+};
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "RealLanding",
+  url: "https://reallanding.com",
+  logo: "https://reallanding.com/logo.png",
+  description:
+    "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+  foundingDate: "2024",
+  sameAs: [
+    "https://twitter.com/RealLandingHQ",
+    "https://linkedin.com/company/reallanding",
+    "https://instagram.com/reallanding",
+    "https://facebook.com/reallanding",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "123 Market Street, Suite 400",
+    addressLocality: "Miami",
+    addressRegion: "FL",
+    postalCode: "33131",
+    addressCountry: "US",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+1-555-123-4567",
+    contactType: "sales",
+    availableLanguage: "English",
+  },
+};
 
 /* ─────────────────────── Data ─────────────────────── */
 
@@ -270,8 +332,11 @@ export default function Home() {
     <div className="min-h-screen bg-white font-[family-name:var(--font-lato)]">
 
       {/* ═══════════════ NAVIGATION ═══════════════ */}
-      <Header />
-
+      <Header />      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+        key="structured-data"
+      />
       {/* ═══════════════ HERO ═══════════════ */}
       <section className="relative isolate overflow-hidden pt-16 pb-24 sm:pt-20 sm:pb-32">
         {/* Background */}

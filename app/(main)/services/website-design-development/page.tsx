@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Website Design & Development for Real Estate | RealLanding",
   description:
     "Custom real estate websites with IDX integration, lead capture, SEO optimization, and stunning design. Mobile-first, fast-loading sites built to convert visitors into clients.",
+  openGraph: {
+    title: "Website Design & Development for Real Estate | RealLanding",
+    description:
+      "Custom real estate websites with IDX integration, lead capture, SEO optimization, and stunning design. Mobile-first, fast-loading sites built to convert visitors into clients.",
+    url: "https://reallanding.com/services/website-design-development",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-website-design-development.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Website Design & Development for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Website Design & Development for Real Estate | RealLanding",
+    description:
+      "Custom real estate websites with IDX integration, lead capture, SEO optimization, and stunning design. Mobile-first, fast-loading sites built to convert visitors into clients.",
+    images: ["https://reallanding.com/og-website-design-development.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Website Design & Development",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Custom real estate websites with IDX integration, lead capture, SEO optimization, and stunning design. Mobile-first, fast-loading sites built to convert visitors into clients.",
+  "url": "https://reallanding.com/services/website-design-development",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "600+", label: "Websites Launched" },
@@ -73,6 +115,12 @@ export default function WebsiteDesignDevelopmentPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

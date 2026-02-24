@@ -8,6 +8,44 @@ export const metadata: Metadata = {
   title: "Case Studies | RealLanding — Real Estate Marketing Results",
   description:
     "See how RealLanding helps real estate professionals generate leads, increase conversions, and scale their businesses with proven marketing strategies.",
+  openGraph: {
+    title: "Case Studies | RealLanding — Real Estate Marketing Results",
+    description:
+      "See how RealLanding helps real estate professionals generate leads, increase conversions, and scale their businesses with proven marketing strategies.",
+    url: "https://reallanding.com/case-studies",
+    type: "website",
+    images: [
+      {
+        url: "https://reallanding.com/og-case-studies.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RealLanding Case Studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies | RealLanding — Real Estate Marketing Results",
+    description:
+      "See how RealLanding helps real estate professionals generate leads, increase conversions, and scale their businesses with proven marketing strategies.",
+    images: ["https://reallanding.com/og-case-studies.jpg"],
+    site: "@RealLandingHQ",
+  },
+};
+
+const caseStudiesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Case Studies | RealLanding",
+  url: "https://reallanding.com/case-studies",
+  description:
+    "See how RealLanding helps real estate professionals generate leads, increase conversions, and scale their businesses with proven marketing strategies.",
+  publisher: {
+    "@type": "Organization",
+    name: "RealLanding",
+    url: "https://reallanding.com",
+    logo: "https://reallanding.com/logo.png",
+  },
 };
 
 const caseStudies = [
@@ -95,6 +133,11 @@ export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesJsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-800 pt-10 pb-24 text-white">

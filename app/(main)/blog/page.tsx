@@ -9,6 +9,44 @@ export const metadata: Metadata = {
   title: "Blog | RealLanding — Real Estate Marketing Insights",
   description:
     "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
+  openGraph: {
+    title: "Blog | RealLanding — Real Estate Marketing Insights",
+    description:
+      "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
+    url: "https://reallanding.com/blog",
+    type: "website",
+    images: [
+      {
+        url: "https://reallanding.com/og-blog.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RealLanding Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | RealLanding — Real Estate Marketing Insights",
+    description:
+      "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
+    images: ["https://reallanding.com/og-blog.jpg"],
+    site: "@RealLandingHQ",
+  },
+};
+
+const blogJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "RealLanding Blog",
+  url: "https://reallanding.com/blog",
+  description:
+    "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
+  publisher: {
+    "@type": "Organization",
+    name: "RealLanding",
+    url: "https://reallanding.com",
+    logo: "https://reallanding.com/logo.png",
+  },
 };
 
 const featuredPost = {
@@ -78,6 +116,11 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-800 pt-10 pb-24 text-white">

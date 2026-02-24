@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "CRM & Sales Automation for Real Estate | RealLanding",
   description:
     "CRM setup, pipeline management, automated follow-ups, lead routing, and sales automation systems that help real estate teams close more deals with less effort.",
+  openGraph: {
+    title: "CRM & Sales Automation for Real Estate | RealLanding",
+    description:
+      "CRM setup, pipeline management, automated follow-ups, lead routing, and sales automation systems that help real estate teams close more deals with less effort.",
+    url: "https://reallanding.com/services/crm-sales-automation",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-crm-sales-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CRM & Sales Automation for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CRM & Sales Automation for Real Estate | RealLanding",
+    description:
+      "CRM setup, pipeline management, automated follow-ups, lead routing, and sales automation systems that help real estate teams close more deals with less effort.",
+    images: ["https://reallanding.com/og-crm-sales-automation.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "CRM & Sales Automation",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "CRM setup, pipeline management, automated follow-ups, lead routing, and sales automation systems that help real estate teams close more deals with less effort.",
+  "url": "https://reallanding.com/services/crm-sales-automation",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "67%", label: "More Deals Closed Per Agent" },
@@ -73,6 +115,12 @@ export default function CRMSalesAutomationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

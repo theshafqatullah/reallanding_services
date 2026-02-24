@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Strategic Growth Planning for Real Estate | RealLanding",
   description:
     "Comprehensive growth strategy for real estate businesses — market analysis, business planning, revenue forecasting, team scaling, geographic expansion, and competitive positioning.",
+  openGraph: {
+    title: "Strategic Growth Planning for Real Estate | RealLanding",
+    description:
+      "Comprehensive growth strategy for real estate businesses — market analysis, business planning, revenue forecasting, team scaling, geographic expansion, and competitive positioning.",
+    url: "https://reallanding.com/services/strategic-growth-planning",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-strategic-growth-planning.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Strategic Growth Planning for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Strategic Growth Planning for Real Estate | RealLanding",
+    description:
+      "Comprehensive growth strategy for real estate businesses — market analysis, business planning, revenue forecasting, team scaling, geographic expansion, and competitive positioning.",
+    images: ["https://reallanding.com/og-strategic-growth-planning.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Strategic Growth Planning",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Comprehensive growth strategy for real estate businesses — market analysis, business planning, revenue forecasting, team scaling, geographic expansion, and competitive positioning.",
+  "url": "https://reallanding.com/services/strategic-growth-planning",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "$180M+", label: "Revenue Growth Planned" },
@@ -73,6 +115,12 @@ export default function StrategicGrowthPlanningPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

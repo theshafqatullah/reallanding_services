@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Email Marketing for Real Estate | RealLanding",
   description:
     "Drip campaigns, newsletters, automated sequences, list segmentation, and email marketing strategies that nurture leads and keep you top of mind with clients.",
+  openGraph: {
+    title: "Email Marketing for Real Estate | RealLanding",
+    description:
+      "Drip campaigns, newsletters, automated sequences, list segmentation, and email marketing strategies that nurture leads and keep you top of mind with clients.",
+    url: "https://reallanding.com/services/email-marketing",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-email-marketing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Email Marketing for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Email Marketing for Real Estate | RealLanding",
+    description:
+      "Drip campaigns, newsletters, automated sequences, list segmentation, and email marketing strategies that nurture leads and keep you top of mind with clients.",
+    images: ["https://reallanding.com/og-email-marketing.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Email Marketing",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Drip campaigns, newsletters, automated sequences, list segmentation, and email marketing strategies that nurture leads and keep you top of mind with clients.",
+  "url": "https://reallanding.com/services/email-marketing",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "$42", label: "Average Return Per $1 Spent" },
@@ -73,6 +115,12 @@ export default function EmailMarketingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

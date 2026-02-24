@@ -8,6 +8,53 @@ export const metadata: Metadata = {
   title: "About Us | RealLanding — Real Estate Marketing Agency",
   description:
     "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+  openGraph: {
+    title: "About Us | RealLanding — Real Estate Marketing Agency",
+    description:
+      "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+    url: "https://reallanding.com/about",
+    type: "website",
+    images: [
+      {
+        url: "https://reallanding.com/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | RealLanding — Real Estate Marketing Agency",
+    description:
+      "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+    images: ["https://reallanding.com/og-about.jpg"],
+    site: "@RealLandingHQ",
+  },
+};
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "RealLanding",
+  url: "https://reallanding.com",
+  logo: "https://reallanding.com/logo.png",
+  description:
+    "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+  foundingDate: "2024",
+  sameAs: [
+    "https://twitter.com/RealLandingHQ",
+    "https://linkedin.com/company/reallanding",
+    "https://instagram.com/reallanding",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "123 Market Street, Suite 400",
+    addressLocality: "Miami",
+    addressRegion: "FL",
+    postalCode: "33131",
+    addressCountry: "US",
+  },
 };
 
 const stats = [
@@ -87,6 +134,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-800 pt-10 pb-24 text-white">

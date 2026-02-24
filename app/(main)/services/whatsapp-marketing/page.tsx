@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "WhatsApp Marketing for Real Estate | RealLanding",
   description:
     "WhatsApp Business API marketing for real estate — broadcast campaigns, automated chatbots, CRM integration, listing alerts, and client communication that drives engagement and closings.",
+  openGraph: {
+    title: "WhatsApp Marketing for Real Estate | RealLanding",
+    description:
+      "WhatsApp Business API marketing for real estate — broadcast campaigns, automated chatbots, CRM integration, listing alerts, and client communication that drives engagement and closings.",
+    url: "https://reallanding.com/services/whatsapp-marketing",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-whatsapp-marketing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "WhatsApp Marketing for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WhatsApp Marketing for Real Estate | RealLanding",
+    description:
+      "WhatsApp Business API marketing for real estate — broadcast campaigns, automated chatbots, CRM integration, listing alerts, and client communication that drives engagement and closings.",
+    images: ["https://reallanding.com/og-whatsapp-marketing.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "WhatsApp Marketing",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "WhatsApp Business API marketing for real estate — broadcast campaigns, automated chatbots, CRM integration, listing alerts, and client communication that drives engagement and closings.",
+  "url": "https://reallanding.com/services/whatsapp-marketing",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "98%", label: "Message Open Rate" },
@@ -73,6 +115,12 @@ export default function WhatsAppMarketingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

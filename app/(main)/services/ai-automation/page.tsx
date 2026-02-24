@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "AI Automation for Real Estate | RealLanding",
   description:
     "AI-powered chatbots, voice assistants, lead qualification, predictive analytics, and workflow automation built for real estate professionals.",
+  openGraph: {
+    title: "AI Automation for Real Estate | RealLanding",
+    description:
+      "AI-powered chatbots, voice assistants, lead qualification, predictive analytics, and workflow automation built for real estate professionals.",
+    url: "https://reallanding.com/services/ai-automation",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-ai-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AI Automation for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation for Real Estate | RealLanding",
+    description:
+      "AI-powered chatbots, voice assistants, lead qualification, predictive analytics, and workflow automation built for real estate professionals.",
+    images: ["https://reallanding.com/og-ai-automation.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI Automation",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "AI-powered chatbots, voice assistants, lead qualification, predictive analytics, and workflow automation built for real estate professionals.",
+  "url": "https://reallanding.com/services/ai-automation",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "78%", label: "Faster Lead Response Time" },
@@ -73,6 +115,12 @@ export default function AIAutomationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

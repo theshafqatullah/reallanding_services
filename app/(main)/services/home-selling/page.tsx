@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Home Selling Services | RealLanding",
   description:
     "Sell your home faster and for top dollar with expert pricing strategy, professional staging, stunning photography, and aggressive marketing that attracts qualified buyers.",
+  openGraph: {
+    title: "Home Selling Services | RealLanding",
+    description:
+      "Sell your home faster and for top dollar with expert pricing strategy, professional staging, stunning photography, and aggressive marketing that attracts qualified buyers.",
+    url: "https://reallanding.com/services/home-selling",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-home-selling.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Home Selling Services | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Selling Services | RealLanding",
+    description:
+      "Sell your home faster and for top dollar with expert pricing strategy, professional staging, stunning photography, and aggressive marketing that attracts qualified buyers.",
+    images: ["https://reallanding.com/og-home-selling.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Home Selling Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Sell your home faster and for top dollar with expert pricing strategy, professional staging, stunning photography, and aggressive marketing that attracts qualified buyers.",
+  "url": "https://reallanding.com/services/home-selling",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "2,400+", label: "Homes Sold" },
@@ -73,6 +115,12 @@ export default function HomeSellingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

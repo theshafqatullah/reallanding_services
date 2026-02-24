@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Analytics & Performance Tracking for Real Estate | RealLanding",
   description:
     "Custom KPI dashboards, ROI reporting, marketing attribution, and data-driven insights that help real estate professionals make smarter decisions and maximize returns.",
+  openGraph: {
+    title: "Analytics & Performance Tracking for Real Estate | RealLanding",
+    description:
+      "Custom KPI dashboards, ROI reporting, marketing attribution, and data-driven insights that help real estate professionals make smarter decisions and maximize returns.",
+    url: "https://reallanding.com/services/analytics-performance",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-analytics-performance.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Analytics & Performance Tracking for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Analytics & Performance Tracking for Real Estate | RealLanding",
+    description:
+      "Custom KPI dashboards, ROI reporting, marketing attribution, and data-driven insights that help real estate professionals make smarter decisions and maximize returns.",
+    images: ["https://reallanding.com/og-analytics-performance.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Analytics & Performance Tracking",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Custom KPI dashboards, ROI reporting, marketing attribution, and data-driven insights that help real estate professionals make smarter decisions and maximize returns.",
+  "url": "https://reallanding.com/services/analytics-performance",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "42%", label: "Average ROI Improvement" },
@@ -73,6 +115,12 @@ export default function AnalyticsPerformancePage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

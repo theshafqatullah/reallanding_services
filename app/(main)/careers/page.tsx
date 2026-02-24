@@ -7,6 +7,44 @@ export const metadata: Metadata = {
   title: "Careers | RealLanding — Join Our Team",
   description:
     "Join the RealLanding team and help real estate professionals grow their businesses with cutting-edge marketing, automation & AI.",
+  openGraph: {
+    title: "Careers | RealLanding — Join Our Team",
+    description:
+      "Join the RealLanding team and help real estate professionals grow their businesses with cutting-edge marketing, automation & AI.",
+    url: "https://reallanding.com/careers",
+    type: "website",
+    images: [
+      {
+        url: "https://reallanding.com/og-careers.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Careers at RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers | RealLanding — Join Our Team",
+    description:
+      "Join the RealLanding team and help real estate professionals grow their businesses with cutting-edge marketing, automation & AI.",
+    images: ["https://reallanding.com/og-careers.jpg"],
+    site: "@RealLandingHQ",
+  },
+};
+
+const careersJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Careers at RealLanding",
+  url: "https://reallanding.com/careers",
+  description:
+    "Join the RealLanding team and help real estate professionals grow their businesses with cutting-edge marketing, automation & AI.",
+  publisher: {
+    "@type": "Organization",
+    name: "RealLanding",
+    url: "https://reallanding.com",
+    logo: "https://reallanding.com/logo.png",
+  },
 };
 
 const perks = [
@@ -74,6 +112,11 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(careersJsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-800 pt-10 pb-24 text-white">

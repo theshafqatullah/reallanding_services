@@ -7,6 +7,44 @@ export const metadata: Metadata = {
   title: "Pricing | RealLanding — Real Estate Marketing Packages",
   description:
     "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
+  openGraph: {
+    title: "Pricing | RealLanding — Real Estate Marketing Packages",
+    description:
+      "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
+    url: "https://reallanding.com/pricing",
+    type: "website",
+    images: [
+      {
+        url: "https://reallanding.com/og-pricing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "RealLanding Pricing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing | RealLanding — Real Estate Marketing Packages",
+    description:
+      "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
+    images: ["https://reallanding.com/og-pricing.jpg"],
+    site: "@RealLandingHQ",
+  },
+};
+
+const pricingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Pricing | RealLanding",
+  url: "https://reallanding.com/pricing",
+  description:
+    "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
+  publisher: {
+    "@type": "Organization",
+    name: "RealLanding",
+    url: "https://reallanding.com",
+    logo: "https://reallanding.com/logo.png",
+  },
 };
 
 const plans = [
@@ -80,6 +118,11 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingJsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-800 pt-10 pb-24 text-white">

@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Property Management Services | RealLanding",
   description:
     "Professional property management for landlords and investors. Tenant screening, rent collection, maintenance coordination, property marketing, lease management, and financial reporting.",
+  openGraph: {
+    title: "Property Management Services | RealLanding",
+    description:
+      "Professional property management for landlords and investors. Tenant screening, rent collection, maintenance coordination, property marketing, lease management, and financial reporting.",
+    url: "https://reallanding.com/services/property-management",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-property-management.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Property Management Services | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Property Management Services | RealLanding",
+    description:
+      "Professional property management for landlords and investors. Tenant screening, rent collection, maintenance coordination, property marketing, lease management, and financial reporting.",
+    images: ["https://reallanding.com/og-property-management.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Professional property management for landlords and investors. Tenant screening, rent collection, maintenance coordination, property marketing, lease management, and financial reporting.",
+  "url": "https://reallanding.com/services/property-management",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "2,800+", label: "Units Managed" },
@@ -73,6 +115,12 @@ export default function PropertyManagementPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

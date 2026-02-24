@@ -6,6 +6,20 @@ export const metadata: Metadata = {
   title: "Terms of Service | RealLanding",
   description:
     "Read the terms and conditions governing your use of RealLanding's website and services.",
+  openGraph: {
+    title: "Terms of Service | RealLanding",
+    description:
+      "Read the terms and conditions governing your use of RealLanding's website and services.",
+    url: "https://reallanding.com/terms-of-service",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service | RealLanding",
+    description:
+      "Read the terms and conditions governing your use of RealLanding's website and services.",
+    site: "@RealLandingHQ",
+  },
 };
 
 export default function TermsOfServicePage() {

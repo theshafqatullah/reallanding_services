@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Conversion Rate Optimization for Real Estate | RealLanding",
   description:
     "A/B testing, landing page optimization, funnel analysis, UX improvements, and data-driven CRO strategies that turn more visitors into leads and clients.",
+  openGraph: {
+    title: "Conversion Rate Optimization for Real Estate | RealLanding",
+    description:
+      "A/B testing, landing page optimization, funnel analysis, UX improvements, and data-driven CRO strategies that turn more visitors into leads and clients.",
+    url: "https://reallanding.com/services/conversion-rate-optimization",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-conversion-rate-optimization.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Conversion Rate Optimization for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Conversion Rate Optimization for Real Estate | RealLanding",
+    description:
+      "A/B testing, landing page optimization, funnel analysis, UX improvements, and data-driven CRO strategies that turn more visitors into leads and clients.",
+    images: ["https://reallanding.com/og-conversion-rate-optimization.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Conversion Rate Optimization",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "A/B testing, landing page optimization, funnel analysis, UX improvements, and data-driven CRO strategies that turn more visitors into leads and clients.",
+  "url": "https://reallanding.com/services/conversion-rate-optimization",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "147%", label: "Average Conversion Rate Increase" },
@@ -73,6 +115,12 @@ export default function CROPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

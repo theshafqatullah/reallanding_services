@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Home Inspection Services | RealLanding",
   description:
     "Comprehensive home inspection services for buyers and sellers — 150+ point inspections, 48-hour report delivery, and 100% licensed inspectors you can trust.",
+  openGraph: {
+    title: "Home Inspection Services | RealLanding",
+    description:
+      "Comprehensive home inspection services for buyers and sellers — 150+ point inspections, 48-hour report delivery, and 100% licensed inspectors you can trust.",
+    url: "https://reallanding.com/services/home-inspection",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-home-inspection.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Home Inspection Services | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Inspection Services | RealLanding",
+    description:
+      "Comprehensive home inspection services for buyers and sellers — 150+ point inspections, 48-hour report delivery, and 100% licensed inspectors you can trust.",
+    images: ["https://reallanding.com/og-home-inspection.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Home Inspection Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Comprehensive home inspection services for buyers and sellers — 150+ point inspections, 48-hour report delivery, and 100% licensed inspectors you can trust.",
+  "url": "https://reallanding.com/services/home-inspection",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "5,000+", label: "Inspections Done" },
@@ -73,6 +115,12 @@ export default function HomeInspectionPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

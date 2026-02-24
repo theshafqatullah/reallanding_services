@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Investor & Project Launch Marketing | RealLanding",
   description:
     "Launch campaigns for real estate investors, developers, and new construction projects. Pre-launch marketing, investor targeting, digital strategy, PR placement, and sales collateral.",
+  openGraph: {
+    title: "Investor & Project Launch Marketing | RealLanding",
+    description:
+      "Launch campaigns for real estate investors, developers, and new construction projects. Pre-launch marketing, investor targeting, digital strategy, PR placement, and sales collateral.",
+    url: "https://reallanding.com/services/investor-project-launch",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-investor-project-launch.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Investor & Project Launch Marketing | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Investor & Project Launch Marketing | RealLanding",
+    description:
+      "Launch campaigns for real estate investors, developers, and new construction projects. Pre-launch marketing, investor targeting, digital strategy, PR placement, and sales collateral.",
+    images: ["https://reallanding.com/og-investor-project-launch.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Investor & Project Launch Marketing",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Launch campaigns for real estate investors, developers, and new construction projects. Pre-launch marketing, investor targeting, digital strategy, PR placement, and sales collateral.",
+  "url": "https://reallanding.com/services/investor-project-launch",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "$850M+", label: "Project Value Launched" },
@@ -73,6 +115,12 @@ export default function InvestorProjectLaunchPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

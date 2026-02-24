@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Video Marketing for Real Estate | RealLanding",
   description:
     "Cinematic property tours, drone footage, agent branding videos, social media reels, and testimonial films that sell homes faster and build your real estate brand.",
+  openGraph: {
+    title: "Video Marketing for Real Estate | RealLanding",
+    description:
+      "Cinematic property tours, drone footage, agent branding videos, social media reels, and testimonial films that sell homes faster and build your real estate brand.",
+    url: "https://reallanding.com/services/video-marketing",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-video-marketing.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Video Marketing for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Video Marketing for Real Estate | RealLanding",
+    description:
+      "Cinematic property tours, drone footage, agent branding videos, social media reels, and testimonial films that sell homes faster and build your real estate brand.",
+    images: ["https://reallanding.com/og-video-marketing.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Video Marketing",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Cinematic property tours, drone footage, agent branding videos, social media reels, and testimonial films that sell homes faster and build your real estate brand.",
+  "url": "https://reallanding.com/services/video-marketing",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "403%", label: "More Inquiries on Listings With Video" },
@@ -73,6 +115,12 @@ export default function VideoMarketingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

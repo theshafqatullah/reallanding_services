@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Sales Funnel Automation for Real Estate | RealLanding",
   description:
     "Full-funnel automation for real estate — funnel strategy, landing pages, lead magnets, automated nurture sequences, retargeting funnels, appointment booking, and funnel analytics.",
+  openGraph: {
+    title: "Sales Funnel Automation for Real Estate | RealLanding",
+    description:
+      "Full-funnel automation for real estate — funnel strategy, landing pages, lead magnets, automated nurture sequences, retargeting funnels, appointment booking, and funnel analytics.",
+    url: "https://reallanding.com/services/sales-funnel-automation",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-sales-funnel-automation.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sales Funnel Automation for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sales Funnel Automation for Real Estate | RealLanding",
+    description:
+      "Full-funnel automation for real estate — funnel strategy, landing pages, lead magnets, automated nurture sequences, retargeting funnels, appointment booking, and funnel analytics.",
+    images: ["https://reallanding.com/og-sales-funnel-automation.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Sales Funnel Automation",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Full-funnel automation for real estate — funnel strategy, landing pages, lead magnets, automated nurture sequences, retargeting funnels, appointment booking, and funnel analytics.",
+  "url": "https://reallanding.com/services/sales-funnel-automation",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "340%", label: "Average Funnel ROI" },
@@ -73,6 +115,12 @@ export default function SalesFunnelAutomationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

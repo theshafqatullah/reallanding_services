@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Real Estate Investment Consulting | RealLanding",
   description:
     "Expert real estate investment consulting — market analysis, portfolio strategy, ROI projections, acquisition due diligence, and investment property marketing for investors.",
+  openGraph: {
+    title: "Real Estate Investment Consulting | RealLanding",
+    description:
+      "Expert real estate investment consulting — market analysis, portfolio strategy, ROI projections, acquisition due diligence, and investment property marketing for investors.",
+    url: "https://reallanding.com/services/real-estate-investment",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-real-estate-investment.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Real Estate Investment Consulting | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Real Estate Investment Consulting | RealLanding",
+    description:
+      "Expert real estate investment consulting — market analysis, portfolio strategy, ROI projections, acquisition due diligence, and investment property marketing for investors.",
+    images: ["https://reallanding.com/og-real-estate-investment.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Real Estate Investment Consulting",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Expert real estate investment consulting — market analysis, portfolio strategy, ROI projections, acquisition due diligence, and investment property marketing for investors.",
+  "url": "https://reallanding.com/services/real-estate-investment",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "$2.4B+", label: "Portfolio Value Managed" },
@@ -73,6 +115,12 @@ export default function RealEstateInvestmentPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

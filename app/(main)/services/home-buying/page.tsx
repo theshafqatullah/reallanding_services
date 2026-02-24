@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Home Buying Assistance | RealLanding",
   description:
     "Expert guidance through every step of the home buying journey — from finding the perfect property to negotiating the best deal and closing with confidence.",
+  openGraph: {
+    title: "Home Buying Assistance | RealLanding",
+    description:
+      "Expert guidance through every step of the home buying journey — from finding the perfect property to negotiating the best deal and closing with confidence.",
+    url: "https://reallanding.com/services/home-buying",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-home-buying.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Home Buying Assistance | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Buying Assistance | RealLanding",
+    description:
+      "Expert guidance through every step of the home buying journey — from finding the perfect property to negotiating the best deal and closing with confidence.",
+    images: ["https://reallanding.com/og-home-buying.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Home Buying Assistance",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Expert guidance through every step of the home buying journey — from finding the perfect property to negotiating the best deal and closing with confidence.",
+  "url": "https://reallanding.com/services/home-buying",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "1,200+", label: "Families Helped" },
@@ -73,6 +115,12 @@ export default function HomeBuyingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

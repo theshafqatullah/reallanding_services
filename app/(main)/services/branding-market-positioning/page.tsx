@@ -7,7 +7,49 @@ export const metadata: Metadata = {
   title: "Branding & Market Positioning for Real Estate | RealLanding",
   description:
     "Strategic brand identity, visual design, market positioning, and brand storytelling that differentiate your real estate business and attract ideal clients.",
+  openGraph: {
+    title: "Branding & Market Positioning for Real Estate | RealLanding",
+    description:
+      "Strategic brand identity, visual design, market positioning, and brand storytelling that differentiate your real estate business and attract ideal clients.",
+    url: "https://reallanding.com/services/branding-market-positioning",
+    type: "article",
+    images: [
+      {
+        url: "https://reallanding.com/og-branding-market-positioning.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Branding & Market Positioning for Real Estate | RealLanding",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Branding & Market Positioning for Real Estate | RealLanding",
+    description:
+      "Strategic brand identity, visual design, market positioning, and brand storytelling that differentiate your real estate business and attract ideal clients.",
+    images: ["https://reallanding.com/og-branding-market-positioning.jpg"],
+    site: "@RealLandingHQ",
+  },
 };
+
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Branding & Market Positioning",
+  "provider": {
+    "@type": "Organization",
+    "name": "RealLanding",
+    "url": "https://reallanding.com",
+    "logo": "https://reallanding.com/logo.png"
+  },
+  "areaServed": "United States",
+  "description": "Strategic brand identity, visual design, market positioning, and brand storytelling that differentiate your real estate business and attract ideal clients.",
+  "url": "https://reallanding.com/services/branding-market-positioning",
+  "category": "Real Estate Marketing"
+};
+
 
 const stats = [
   { value: "89%", label: "Of Buyers Choose Agents by Brand Trust" },
@@ -73,6 +115,12 @@ export default function BrandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        key="structured-data"
+      />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">

@@ -6,6 +6,20 @@ export const metadata: Metadata = {
   title: "Privacy Policy | RealLanding",
   description:
     "Learn how RealLanding collects, uses, and protects your personal information.",
+  openGraph: {
+    title: "Privacy Policy | RealLanding",
+    description:
+      "Learn how RealLanding collects, uses, and protects your personal information.",
+    url: "https://reallanding.com/privacy-policy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | RealLanding",
+    description:
+      "Learn how RealLanding collects, uses, and protects your personal information.",
+    site: "@RealLandingHQ",
+  },
 };
 
 export default function PrivacyPolicyPage() {
