@@ -1,0 +1,144 @@
+{
+  "domain": "https://services.reallanding.com",
+  "totalServices": 23,
+  "services": [
+    {
+      "name": "AI Automation for Real Estate",
+      "slug": "ai-automation",
+      "url": "https://services.reallanding.com/services/ai-automation",
+      "description": "AI-powered chatbots, voice assistants, lead qualification, predictive analytics, and workflow automation built for real estate professionals."
+    },
+    {
+      "name": "Analytics & Performance Tracking",
+      "slug": "analytics-performance",
+      "url": "https://services.reallanding.com/services/analytics-performance",
+      "description": "Custom KPI dashboards, ROI reporting, marketing attribution, and data-driven insights that help real estate professionals make smarter decisions and maximize returns."
+    },
+    {
+      "name": "Branding & Market Positioning",
+      "slug": "branding-market-positioning",
+      "url": "https://services.reallanding.com/services/branding-market-positioning",
+      "description": "Strategic brand identity, visual design, market positioning, and brand storytelling that differentiate your real estate business and attract ideal clients."
+    },
+    {
+      "name": "Content Marketing",
+      "slug": "content-marketing",
+      "url": "https://services.reallanding.com/services/content-marketing",
+      "description": "Attract qualified buyers, sellers, and investors with strategic real estate content — blog posts, market reports, neighborhood guides, and more that build authority and generate organic leads."
+    },
+    {
+      "name": "Conversion Rate Optimization",
+      "slug": "conversion-rate-optimization",
+      "url": "https://services.reallanding.com/services/conversion-rate-optimization",
+      "description": "A/B testing, landing page optimization, funnel analysis, UX improvements, and data-driven CRO strategies that turn more visitors into leads and clients."
+    },
+    {
+      "name": "CRM & Sales Automation",
+      "slug": "crm-sales-automation",
+      "url": "https://services.reallanding.com/services/crm-sales-automation",
+      "description": "CRM setup, pipeline management, automated follow-ups, lead routing, and sales automation systems that help real estate teams close more deals with less effort."
+    },
+    {
+      "name": "Email Marketing",
+      "slug": "email-marketing",
+      "url": "https://services.reallanding.com/services/email-marketing",
+      "description": "Drip campaigns, newsletters, automated sequences, list segmentation, and email marketing strategies that nurture leads and keep you top of mind with clients."
+    },
+    {
+      "name": "Home Buying Assistance",
+      "slug": "home-buying",
+      "url": "https://services.reallanding.com/services/home-buying",
+      "description": "Expert guidance through every step of the home buying journey — from finding the perfect property to negotiating the best deal and closing with confidence."
+    },
+    {
+      "name": "Home Inspection Services",
+      "slug": "home-inspection",
+      "url": "https://services.reallanding.com/services/home-inspection",
+      "description": "Comprehensive home inspection services for buyers and sellers — 150+ point inspections, 48-hour report delivery, and 100% licensed inspectors you can trust."
+    },
+    {
+      "name": "Home Selling Services",
+      "slug": "home-selling",
+      "url": "https://services.reallanding.com/services/home-selling",
+      "description": "Sell your home faster and for top dollar with expert pricing strategy, professional staging, stunning photography, and aggressive marketing that attracts qualified buyers."
+    },
+    {
+      "name": "Investor & Project Launch Marketing",
+      "slug": "investor-project-launch",
+      "url": "https://services.reallanding.com/services/investor-project-launch",
+      "description": "Launch campaigns for real estate investors, developers, and new construction projects. Pre-launch marketing, investor targeting, digital strategy, PR placement, and sales collateral."
+    },
+    {
+      "name": "Lead Generation",
+      "slug": "lead-generation",
+      "url": "https://services.reallanding.com/services/lead-generation",
+      "description": "Multi-channel lead generation for real estate agents and teams. Facebook & Instagram lead ads, Google PPC, SEO leads, home valuation pages, IDX capture, and referral campaigns."
+    },
+    {
+      "name": "Paid Advertising",
+      "slug": "paid-advertising",
+      "url": "https://services.reallanding.com/services/paid-advertising",
+      "description": "Drive qualified buyer and seller leads with high-performance paid advertising campaigns across Google, Facebook, Instagram, TikTok, and YouTube — built exclusively for real estate professionals."
+    },
+    {
+      "name": "Property Management Services",
+      "slug": "property-management",
+      "url": "https://services.reallanding.com/services/property-management",
+      "description": "Professional property management for landlords and investors. Tenant screening, rent collection, maintenance coordination, property marketing, lease management, and financial reporting."
+    },
+    {
+      "name": "Real Estate Investment Consulting",
+      "slug": "real-estate-investment",
+      "url": "https://services.reallanding.com/services/real-estate-investment",
+      "description": "Expert real estate investment consulting — market analysis, portfolio strategy, ROI projections, acquisition due diligence, and investment property marketing for investors."
+    },
+    {
+      "name": "Reputation Management",
+      "slug": "reputation-management",
+      "url": "https://services.reallanding.com/services/reputation-management",
+      "description": "Online reputation management for real estate professionals — review generation, monitoring, negative review resolution, Google Business Profile optimization, and social proof marketing."
+    },
+    {
+      "name": "Sales Funnel Automation",
+      "slug": "sales-funnel-automation",
+      "url": "https://services.reallanding.com/services/sales-funnel-automation",
+      "description": "Full-funnel automation for real estate — funnel strategy, landing pages, lead magnets, automated nurture sequences, retargeting funnels, appointment booking, and funnel analytics."
+    },
+    {
+      "name": "SEO for Real Estate",
+      "slug": "seo",
+      "url": "https://services.reallanding.com/services/seo",
+      "description": "Dominate local and organic search results with real estate SEO strategies that drive qualified buyer and seller traffic to your website — month after month."
+    },
+    {
+      "name": "Social Media Marketing",
+      "slug": "social-media-marketing",
+      "url": "https://services.reallanding.com/services/social-media-marketing",
+      "description": "Grow your real estate brand with strategic social media management — content creation, agent branding, reels, community management, and lead generation across Instagram, Facebook, LinkedIn & TikTok."
+    },
+    {
+      "name": "Strategic Growth Planning",
+      "slug": "strategic-growth-planning",
+      "url": "https://services.reallanding.com/services/strategic-growth-planning",
+      "description": "Comprehensive growth strategy for real estate businesses — market analysis, business planning, revenue forecasting, team scaling, geographic expansion, and competitive positioning."
+    },
+    {
+      "name": "Video Marketing",
+      "slug": "video-marketing",
+      "url": "https://services.reallanding.com/services/video-marketing",
+      "description": "Cinematic property tours, drone footage, agent branding videos, social media reels, and testimonial films that sell homes faster and build your real estate brand."
+    },
+    {
+      "name": "Website Design & Development",
+      "slug": "website-design-development",
+      "url": "https://services.reallanding.com/services/website-design-development",
+      "description": "Custom real estate websites with IDX integration, lead capture, SEO optimization, and stunning design. Mobile-first, fast-loading sites built to convert visitors into clients."
+    },
+    {
+      "name": "WhatsApp Marketing",
+      "slug": "whatsapp-marketing",
+      "url": "https://services.reallanding.com/services/whatsapp-marketing",
+      "description": "WhatsApp Business API marketing for real estate — broadcast campaigns, automated chatbots, CRM integration, listing alerts, and client communication that drives engagement and closings."
+    }
+  ]
+}

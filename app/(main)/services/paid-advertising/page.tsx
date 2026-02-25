@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import { AnimatedSections } from "@/app/components/AnimateOnScroll";
+import FAQAccordion from "@/app/components/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Paid Advertising for Real Estate | RealLanding",
@@ -120,6 +122,8 @@ export default function PaidAdvertisingPage() {
         key="structured-data"
       />
 
+
+      <AnimatedSections>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-green-600 via-emerald-700 to-green-900 pt-32 pb-28">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
@@ -282,19 +286,7 @@ export default function PaidAdvertisingPage() {
             <span className="text-green-600 font-semibold text-sm uppercase tracking-wider">FAQ</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Common Questions About Paid Advertising</h2>
           </div>
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
-              <details key={i} className="group bg-white rounded-2xl border border-gray-100 hover:border-green-200 transition-colors">
-                <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-gray-900 [&::-webkit-details-marker]:hidden">
-                  {faq.question}
-                  <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                </summary>
-                <div className="px-6 pb-6 -mt-2">
-                  <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <FAQAccordion faqs={faqs} />
         </div>
       </section>
 
@@ -329,6 +321,7 @@ export default function PaidAdvertisingPage() {
         </div>
       </section>
 
+      </AnimatedSections>
       <Footer />
     </div>
   );

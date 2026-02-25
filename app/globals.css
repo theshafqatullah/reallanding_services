@@ -21,3 +21,70 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* ===== Animate on Scroll ===== */
+.aos-element {
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Initial (hidden) states */
+.aos-element.fadeUp { opacity: 0; transform: translateY(40px); }
+.aos-element.fadeDown { opacity: 0; transform: translateY(-40px); }
+.aos-element.fadeLeft { opacity: 0; transform: translateX(-40px); }
+.aos-element.fadeRight { opacity: 0; transform: translateX(40px); }
+.aos-element.fadeIn { opacity: 0; }
+.aos-element.scaleUp { opacity: 0; transform: scale(0.92); }
+.aos-element.slideUp { opacity: 0; transform: translateY(60px); }
+
+/* Visible (animated) states */
+.aos-element.aos-visible.fadeUp,
+.aos-element.aos-visible.fadeDown,
+.aos-element.aos-visible.fadeLeft,
+.aos-element.aos-visible.fadeRight,
+.aos-element.aos-visible.fadeIn,
+.aos-element.aos-visible.scaleUp,
+.aos-element.aos-visible.slideUp {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Staggered children animation helper */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stagger-children.aos-visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: none; }
+.stagger-children.aos-visible > *:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: none; }
+.stagger-children.aos-visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: none; }
+.stagger-children.aos-visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: none; }
+.stagger-children.aos-visible > *:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: none; }
+.stagger-children.aos-visible > *:nth-child(6) { transition-delay: 400ms; opacity: 1; transform: none; }
+.stagger-children.aos-visible > *:nth-child(n+7) { transition-delay: 480ms; opacity: 1; transform: none; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .aos-element, .stagger-children > *, .section-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ===== Section-level scroll animation ===== */
+.section-animate {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-animate.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger sections that follow each other */
+.section-animate:nth-child(2) { transition-delay: 50ms; }
+.section-animate:nth-child(3) { transition-delay: 100ms; }
