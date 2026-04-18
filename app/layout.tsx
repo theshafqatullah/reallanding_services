@@ -10,7 +10,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+  title: "RealLanding | Real Estate Marketing, Automation & AI Agency",
   description:
     "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
 };

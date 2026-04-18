@@ -5,13 +5,13 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About Us | RealLanding — Real Estate Marketing Agency",
+  title: "About Us | RealLanding | Real Estate Marketing Agency",
   description:
-    "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+    "Learn about RealLanding, the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
   openGraph: {
-    title: "About Us | RealLanding — Real Estate Marketing Agency",
+    title: "About Us | RealLanding | Real Estate Marketing Agency",
     description:
-      "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+      "Learn about RealLanding, the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
     url: "https://reallanding.com/about",
     type: "website",
     images: [
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | RealLanding — Real Estate Marketing Agency",
+    title: "About Us | RealLanding | Real Estate Marketing Agency",
     description:
-      "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+      "Learn about RealLanding, the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
     images: ["https://reallanding.com/og-about.jpg"],
     site: "@RealLandingHQ",
   },
@@ -40,7 +40,7 @@ const aboutJsonLd = {
   url: "https://reallanding.com",
   logo: "https://reallanding.com/logo.png",
   description:
-    "Learn about RealLanding — the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
+    "Learn about RealLanding, the all-in-one marketing, automation & AI agency built exclusively for real estate professionals.",
   foundingDate: "2024",
   sameAs: [
     "https://twitter.com/RealLandingHQ",
@@ -81,7 +81,7 @@ const values = [
       </svg>
     ),
     title: "Results Over Vanity",
-    desc: "We measure success in leads, closings, and ROI — not likes. Every campaign ties directly to your bottom line.",
+    desc: "We measure success in leads, closings, and ROI, not likes. Every campaign ties directly to your bottom line.",
   },
   {
     icon: (
@@ -99,7 +99,7 @@ const values = [
       </svg>
     ),
     title: "Partnership Mentality",
-    desc: "We don't just serve clients — we become an extension of your team, fully invested in your growth and success.",
+    desc: "We don't just serve clients. We become an extension of your team, fully invested in your growth and success.",
   },
 ];
 
@@ -187,13 +187,13 @@ export default function AboutPage() {
               </p>
               <p>
                 Our founder, having spent over a decade in real estate marketing, saw the
-                same problems everywhere — cookie-cutter campaigns, vanity metrics, and
+                same problems everywhere: cookie-cutter campaigns, vanity metrics, and
                 zero accountability for actual closings.
               </p>
               <p>
                 So we built something different. An agency that speaks fluent real estate,
                 combines cutting-edge AI with proven marketing strategies, and measures
-                success the only way that matters — by the deals you close.
+                success the only way that matters: by the deals you close.
               </p>
             </div>
           </div>

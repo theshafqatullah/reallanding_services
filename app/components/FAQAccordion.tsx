@@ -27,7 +27,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             key={i}
             className={`bg-white rounded-2xl border transition-all duration-300 ${
               isOpen
-                ? "border-green-200 shadow-lg shadow-green-100/50"
+                ? "border-green-200"
                 : "border-gray-100 hover:border-green-200"
             }`}
           >

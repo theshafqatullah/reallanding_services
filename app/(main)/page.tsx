@@ -4,13 +4,13 @@ import type { Metadata } from "next";
 import Header from "@/app/components/Header";
 
 export const metadata: Metadata = {
-  title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+  title: "RealLanding | Real Estate Marketing, Automation & AI Agency",
   description:
-    "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+    "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation and more.",
   openGraph: {
-    title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+    title: "RealLanding | Real Estate Marketing, Automation & AI Agency",
     description:
-      "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+      "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation and more.",
     url: "https://reallanding.com",
     type: "website",
     siteName: "RealLanding",
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
         url: "https://reallanding.com/og-homepage.jpg",
         width: 1200,
         height: 630,
-        alt: "RealLanding — Real Estate Marketing Agency",
+        alt: "RealLanding | Real Estate Marketing Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RealLanding — Real Estate Marketing, Automation & AI Agency",
+    title: "RealLanding | Real Estate Marketing, Automation & AI Agency",
     description:
-      "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+      "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation and more.",
     images: ["https://reallanding.com/og-homepage.jpg"],
     site: "@RealLandingHQ",
   },
@@ -40,7 +40,7 @@ const homeJsonLd = {
   url: "https://reallanding.com",
   logo: "https://reallanding.com/logo.png",
   description:
-    "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation & more.",
+    "Grow your real estate business with 18+ specialized services including social media marketing, paid ads, SEO, AI automation, CRM, lead generation and more.",
   foundingDate: "2024",
   sameAs: [
     "https://twitter.com/RealLandingHQ",
@@ -203,7 +203,7 @@ const highlights = [
       </svg>
     ),
     title: "Real Estate Only",
-    desc: "Every strategy, system, and campaign is purpose-built for agents, developers & investors.",
+    desc: "Every strategy, system, and campaign we build is made specifically for agents, developers, and investors.",
   },
   {
     icon: (
@@ -212,7 +212,7 @@ const highlights = [
       </svg>
     ),
     title: "Data-Driven",
-    desc: "Every dollar tracked. Every decision informed by real analytics and measurable performance data.",
+    desc: "Every dollar is tracked. Every decision backed by real analytics and actual performance numbers.",
   },
   {
     icon: (
@@ -221,7 +221,7 @@ const highlights = [
       </svg>
     ),
     title: "AI-Powered",
-    desc: "24/7 chatbots, voice agents & smart automation that capture and qualify leads while you sleep.",
+    desc: "Chatbots, voice agents, and smart automations that capture and qualify leads around the clock.",
   },
   {
     icon: (
@@ -230,13 +230,13 @@ const highlights = [
       </svg>
     ),
     title: "18 Integrated Services",
-    desc: "From SEO to CRM, paid ads to AI chatbots — everything under one roof for seamless growth.",
+    desc: "From SEO to CRM, paid ads to AI chatbots, everything under one roof so nothing falls through the cracks.",
   },
 ];
 
 const testimonials = [
   {
-    quote: "RealLanding&rsquo;s AI automation and lead generation system tripled our monthly inquiries within 60 days. The ROI has been incredible.",
+    quote: "RealLanding&rsquo;s AI automation and lead gen system tripled our monthly inquiries in under 60 days. The ROI has been unreal.",
     author: "Ahmed R.",
     role: "Real Estate Developer",
     initials: "AR",
@@ -244,7 +244,7 @@ const testimonials = [
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80",
   },
   {
-    quote: "Their SEO and content strategy put us on page one of Google for every target keyword. Organic leads are now our #1 source.",
+    quote: "Their SEO and content work got us on page one of Google for every keyword we were targeting. Organic leads are now our biggest source.",
     author: "Sarah K.",
     role: "Brokerage Owner",
     initials: "SK",
@@ -252,7 +252,7 @@ const testimonials = [
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80",
   },
   {
-    quote: "The paid advertising campaigns consistently deliver qualified buyer leads at a fraction of what we used to pay. Truly game-changing.",
+    quote: "The paid ad campaigns keep bringing us qualified buyer leads at a fraction of what we used to spend. It honestly changed our business.",
     author: "Michael T.",
     role: "Property Investor",
     initials: "MT",
@@ -265,25 +265,25 @@ const processSteps = [
   {
     num: "01",
     title: "Discovery",
-    desc: "Free strategy call to understand your goals, market, and growth challenges.",
+    desc: "Free strategy call where we learn about your goals, your market, and what's been holding you back.",
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop&q=80",
   },
   {
     num: "02",
     title: "Strategy",
-    desc: "Custom marketing & automation blueprint tailored to your business.",
+    desc: "We put together a custom marketing and automation plan designed around your business.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&q=80",
   },
   {
     num: "03",
     title: "Execution",
-    desc: "We build, launch & manage your campaigns, funnels, and AI systems.",
+    desc: "We build, launch, and manage your campaigns, funnels, and AI systems.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop&q=80",
   },
   {
     num: "04",
     title: "Growth",
-    desc: "Continuous optimization, scaling, and transparent performance reporting.",
+    desc: "We keep optimizing, scaling what works, and reporting on everything so you always know where you stand.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&q=80",
   },
 ];
@@ -291,19 +291,19 @@ const processSteps = [
 const faqs = [
   {
     q: "Who is RealLanding for?",
-    a: "We work exclusively with real estate professionals — agents, brokerages, developers, and investors who want to generate more leads and close more deals.",
+    a: "We work only with real estate professionals. That means agents, brokerages, developers, and investors who want more leads and more closed deals.",
   },
   {
     q: "How quickly will I see results?",
-    a: "Paid advertising campaigns typically generate leads within the first week. SEO and organic strategies build momentum over 60–90 days with compounding returns.",
+    a: "Paid ad campaigns usually start bringing in leads within the first week. SEO and organic strategies take about 60 to 90 days to really pick up, but the returns keep growing over time.",
   },
   {
     q: "Do I need to use all 18 services?",
-    a: "Not at all. We'll recommend a tailored package based on your goals and budget during the free strategy call. You can start with as few as 1–2 services.",
+    a: "Not at all. We will recommend the right mix based on your goals and budget during the free strategy call. Most clients start with just one or two services.",
   },
   {
     q: "What makes you different from other agencies?",
-    a: "We focus 100% on real estate. Every strategy, funnel, and AI system is built specifically for property professionals — not generic marketing repurposed for real estate.",
+    a: "We focus 100% on real estate. Every strategy, funnel, and AI system we build is designed for property professionals, not recycled from some generic marketing playbook.",
   },
 ];
 
@@ -366,9 +366,9 @@ export default function Home() {
               </h1>
 
               <p className="mt-6 max-w-lg text-[16px] leading-relaxed text-zinc-500">
-                We help agents, developers &amp; investors generate more leads,
-                close more deals, and build dominant brands — with marketing,
-                automation &amp; AI systems that work around the clock.
+                We help agents, developers, and investors get more leads,
+                close more deals, and build stronger brands with marketing,
+                automation, and AI systems that never stop working.
               </p>
 
               <div className="mt-9 flex flex-col gap-3.5 sm:flex-row">
@@ -481,7 +481,7 @@ export default function Home() {
               Business Needs to Thrive
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-zinc-500">
-              Four pillars of growth — each packed with specialized services designed exclusively for real estate.
+              Four pillars of growth, each packed with services built from the ground up for real estate.
             </p>
           </div>
 
@@ -559,7 +559,7 @@ export default function Home() {
                 for Themselves
               </h2>
               <p className="mt-4 max-w-md text-[15px] leading-relaxed text-zinc-400">
-                Our clients consistently see measurable growth across lead volume,
+                Our clients see real, measurable growth in lead volume,
                 conversion rates, and revenue.
               </p>
 
@@ -728,8 +728,8 @@ export default function Home() {
             Real Estate Business?
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-[16px] leading-relaxed text-green-100/90">
-            Book a free strategy call. We&rsquo;ll audit your current marketing,
-            identify quick wins, and map out a custom growth plan — no
+            Book a free strategy call. We&rsquo;ll look at your current marketing,
+            find the quick wins, and put together a custom growth plan. No
             strings attached.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

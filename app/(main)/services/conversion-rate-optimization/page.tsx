@@ -57,29 +57,29 @@ const stats = [
 ];
 
 const services = [
-  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>), title: "A/B & Multivariate Testing", description: "Scientific testing of headlines, CTAs, layouts, images, forms, and copy to identify what converts best — eliminating guesswork with statistical confidence." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>), title: "A/B & Multivariate Testing", description: "Scientific testing of headlines, CTAs, layouts, images, forms, and copy to identify what converts best. eliminating guesswork with statistical confidence." },
   { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>), title: "Landing Page Optimization", description: "Design, test, and optimize high-converting landing pages for listings, lead magnets, home valuations, and buyer/seller funnels that maximize form submissions." },
-  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992" /></svg>), title: "Funnel Analysis & Optimization", description: "Map and analyze every step of your conversion funnel to identify where leads drop off — then implement targeted fixes to plug the leaks." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M21.015 4.356v4.992" /></svg>), title: "Funnel Analysis & Optimization", description: "Map and analyze every step of your conversion funnel to identify where leads drop off. then implement targeted fixes to plug the leaks." },
   { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>), title: "UX & Mobile Optimization", description: "Improve site speed, mobile responsiveness, navigation, and user flow to reduce friction and make it effortless for visitors to become leads." },
   { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" /></svg>), title: "Form & CTA Optimization", description: "Optimize form fields, button copy, placement, and design to dramatically increase submission rates without sacrificing lead quality." },
-  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z" /></svg>), title: "Heatmap & Behavior Analysis", description: "Use heatmaps, session recordings, and scroll tracking to understand exactly how visitors interact with your pages — then optimize based on real behavior." },
+  { icon: (<svg className="w-7 h-7 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z" /></svg>), title: "Heatmap & Behavior Analysis", description: "Use heatmaps, session recordings, and scroll tracking to understand exactly how visitors interact with your pages. then optimize based on real behavior." },
 ];
 
 const steps = [
   { step: 1, title: "Audit & Analysis", description: "Comprehensive review of your website, funnels, analytics, and user behavior to identify the highest-impact optimization opportunities." },
   { step: 2, title: "Hypothesis Development", description: "Data-informed hypotheses about what changes will improve conversions, prioritized by potential impact and implementation effort." },
-  { step: 3, title: "Test Design & Build", description: "Design and build test variations — new layouts, copy, forms, and CTAs — using best practices from 2,400+ real estate tests." },
+  { step: 3, title: "Test Design & Build", description: "Design and build test variations. new layouts, copy, forms, and CTAs. using best practices from 2,400+ real estate tests." },
   { step: 4, title: "Run & Monitor Tests", description: "Launch A/B tests with proper traffic allocation, monitor for statistical significance, and ensure clean data collection." },
   { step: 5, title: "Analyze & Implement", description: "Winning variations are permanently implemented, results are documented, and insights feed the next round of testing for continuous improvement." },
 ];
 
 const benefits = [
-  { title: "More Leads, Same Traffic", desc: "CRO extracts more value from your existing traffic — no need to spend more on ads when you can convert more of what you already have." },
+  { title: "More Leads, Same Traffic", desc: "CRO extracts more value from your existing traffic, no need to spend more on ads when you can convert more of what you already have." },
   { title: "Lower Cost-Per-Lead", desc: "Higher conversion rates mean lower CPL across all channels. A 50% conversion improvement effectively cuts your ad costs in half." },
   { title: "Data-Driven Decisions", desc: "No more redesigning based on opinions. A/B testing gives you statistical proof of what works before committing to changes." },
   { title: "Compound Growth Effect", desc: "Every conversion improvement compounds. A 10% lift this month creates permanent value that benefits every future visitor." },
-  { title: "Better User Experience", desc: "CRO improvements make your site easier to use, faster to load, and more intuitive — which improves brand perception too." },
-  { title: "Higher Quality Leads", desc: "Optimized forms and funnels don't just produce more leads — they produce better-qualified leads by improving question flow and intent capture." },
+  { title: "Better User Experience", desc: "CRO improvements make your site easier to use, faster to load, and more intuitive. which improves brand perception too." },
+  { title: "Higher Quality Leads", desc: "Optimized forms and funnels don't just produce more leads. they produce better-qualified leads by improving question flow and intent capture." },
 ];
 
 const results = [
@@ -116,7 +116,7 @@ export default function CROPage() {
       badgeIcon: (<svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5-7.5L16.5 3m0 0L12 7.5m4.5-4.5v13.5" /></svg>),
       badgeText: "Optimization & Testing",
       title: `Turn More Visitors Into<br className="hidden md:block" /> Real Estate Leads &amp; Clients`,
-      description: `A/B testing, landing page optimization, and funnel analysis that increase your conversion rates — generating more leads without spending more on traffic.`,
+      description: `A/B testing, landing page optimization, and funnel analysis that increase your conversion rates. generating more leads without spending more on traffic.`,
       primaryCTA: "Get Your Free CRO Audit",
       secondaryCTA: "See Case Studies",
       trustLine: "2,400+ A/B tests run for real estate clients",
@@ -145,7 +145,7 @@ export default function CROPage() {
       relatedHeading: "Related Services",
       relatedSubheading: `Maximize Your CRO Results`,
       ctaHeading: `Ready to Convert More Visitors Into Leads?`,
-      ctaDescription: `Book a free conversion audit and discover exactly where your website is leaking leads — and how to fix it for more closings with the same traffic.`,
+      ctaDescription: `Book a free conversion audit and discover exactly where your website is leaking leads. and how to fix it for more closings with the same traffic.`,
       ctaCTA: "Get Your Free CRO Audit",
       ctaSubtext: "Includes heatmap analysis and prioritized optimization roadmap",
     }} />

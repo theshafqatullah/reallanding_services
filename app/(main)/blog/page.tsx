@@ -6,11 +6,11 @@ import Footer from "@/app/components/Footer";
 import NewsletterForm from "@/app/components/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Blog | RealLanding — Real Estate Marketing Insights",
+  title: "Blog | RealLanding | Real Estate Marketing Insights",
   description:
     "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
   openGraph: {
-    title: "Blog | RealLanding — Real Estate Marketing Insights",
+    title: "Blog | RealLanding | Real Estate Marketing Insights",
     description:
       "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
     url: "https://reallanding.com/blog",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | RealLanding — Real Estate Marketing Insights",
+    title: "Blog | RealLanding | Real Estate Marketing Insights",
     description:
       "Expert tips, strategies, and insights on real estate marketing, lead generation, AI automation, and more from the RealLanding team.",
     images: ["https://reallanding.com/og-blog.jpg"],

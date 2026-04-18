@@ -4,11 +4,11 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Pricing | RealLanding — Real Estate Marketing Packages",
+  title: "Pricing | RealLanding | Real Estate Marketing Packages",
   description:
     "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
   openGraph: {
-    title: "Pricing | RealLanding — Real Estate Marketing Packages",
+    title: "Pricing | RealLanding | Real Estate Marketing Packages",
     description:
       "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
     url: "https://reallanding.com/pricing",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pricing | RealLanding — Real Estate Marketing Packages",
+    title: "Pricing | RealLanding | Real Estate Marketing Packages",
     description:
       "Transparent pricing for real estate marketing, automation & AI services. Choose a package or build a custom plan tailored to your business.",
     images: ["https://reallanding.com/og-pricing.jpg"],
@@ -233,7 +233,7 @@ export default function PricingPage() {
               { q: "Are there any setup fees?", a: "No setup fees for Starter and Growth plans. Enterprise plans may include a one-time onboarding fee depending on scope." },
               { q: "Can I change plans later?", a: "Absolutely. You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle." },
               { q: "Is there a minimum contract?", a: "No long-term contracts. All plans are month-to-month with 30 days notice to cancel. We believe in earning your business every month." },
-              { q: "What's included in the free strategy call?", a: "A 30-minute consultation where we audit your current marketing, identify gaps, and recommend a custom growth plan — no obligation." },
+              { q: "What's included in the free strategy call?", a: "A 30-minute consultation where we audit your current marketing, identify gaps, and recommend a custom growth plan, no obligation." },
               { q: "Do you offer custom packages?", a: "Yes! If our standard plans don't fit, we'll build a custom package tailored to your specific goals and budget." },
             ].map((faq) => (
               <div key={faq.q} className="rounded-2xl border border-zinc-100 bg-white p-6">

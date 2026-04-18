@@ -132,7 +132,7 @@ function AnimatedStat({ value, label }: { value: string; label: string }) {
   return (
     <div
       ref={ref}
-      className={`bg-white/95 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg shadow-gray-200/50 border border-gray-100 card-hover ${visible ? "animate-count-up" : "opacity-0"}`}
+      className={`bg-white/95 backdrop-blur-sm rounded-2xl p-6 text-center border border-gray-100 card-hover ${visible ? "animate-count-up" : "opacity-0"}`}
     >
       <div className="text-3xl md:text-4xl font-extrabold text-gradient mb-1">{value}</div>
       <div className="text-gray-500 text-sm font-medium">{label}</div>
@@ -255,7 +255,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{ animation: "count-up 0.6s cubic-bezier(0.16,1,0.3,1) 0.5s both" }}>
             <Link
               href={data.primaryCTALink || "/contact"}
-              className="group bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg shadow-green-900/20 hover:shadow-xl hover:shadow-green-900/30 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+              className="group bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
             >
               {data.primaryCTA}
               <svg className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
@@ -305,10 +305,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data.services.map((s, i) => (
-            <StaggerItem key={i} index={i} className="group bg-white border border-gray-100 rounded-2xl p-8 hover:border-green-200 hover:shadow-xl hover:shadow-green-100/40 transition-all duration-300 card-hover relative overflow-hidden">
+            <StaggerItem key={i} index={i} className="group bg-white border border-gray-100 rounded-2xl p-8 hover:border-green-200 transition-all duration-300 card-hover relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-green-50 to-transparent rounded-bl-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl flex items-center justify-center text-green-600 mb-5 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-green-100/50 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl flex items-center justify-center text-green-600 mb-5 group-hover:scale-110 transition-all duration-300">
                   {s.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">{s.title}</h3>
@@ -352,9 +352,9 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.benefits.map((b, i) => (
-              <StaggerItem key={i} index={i} className="group bg-gradient-to-br from-white to-green-50/30 border border-gray-100 rounded-2xl p-7 hover:border-green-200 hover:shadow-lg hover:shadow-green-50 transition-all duration-300 card-hover">
+              <StaggerItem key={i} index={i} className="group bg-gradient-to-br from-white to-green-50/30 border border-gray-100 rounded-2xl p-7 hover:border-green-200 transition-all duration-300 card-hover">
                 <div className="flex items-start gap-4 mb-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-200/50 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
@@ -384,7 +384,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <div className="grid md:grid-cols-5 gap-8">
             {data.steps.map((s, i) => (
               <StaggerItem key={s.step} index={i} className="text-center relative group">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-5 relative z-10 shadow-lg shadow-green-200/50 group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 rotate-3 group-hover:rotate-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold mx-auto mb-5 relative z-10 group-hover:scale-110 transition-all duration-300 rotate-3 group-hover:rotate-0">
                   {s.step}
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2 text-[15px]">{s.title}</h3>
@@ -421,7 +421,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
               </div>
               {/* Recommended */}
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200 relative card-hover">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg shadow-green-200/50">RECOMMENDED</div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-4 py-1 rounded-full">RECOMMENDED</div>
                 <h3 className="font-bold text-green-700 text-lg mb-6 flex items-center gap-2">
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   {data.comparison.recommendedTitle}
@@ -464,7 +464,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <div className="grid md:grid-cols-3 gap-6">
             {data.relatedServices.map((rs, i) => (
               <StaggerItem key={i} index={i}>
-                <Link href={rs.href} className="group bg-white border border-gray-100 rounded-2xl p-8 hover:border-green-200 hover:shadow-xl hover:shadow-green-50 transition-all block card-hover h-full">
+                <Link href={rs.href} className="group bg-white border border-gray-100 rounded-2xl p-8 hover:border-green-200 transition-all block card-hover h-full">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">{rs.title}</h3>
                   <p className="text-gray-500 leading-relaxed mb-5">{rs.description}</p>
                   <span className="text-green-600 font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2.5 transition-all">
@@ -488,7 +488,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <p className="text-lg md:text-xl text-green-100/90 mb-10 max-w-2xl mx-auto leading-relaxed">{data.ctaDescription}</p>
           <Link
             href={data.ctaCTALink || "/contact"}
-            className="group inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg shadow-green-900/20 hover:shadow-xl hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all hover:-translate-y-0.5"
           >
             {data.ctaCTA}
             <svg className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>

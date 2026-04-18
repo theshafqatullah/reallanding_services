@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | RealLanding — Get Your Free Strategy Session",
+  title: "Contact Us | RealLanding | Get Your Free Strategy Session",
   description:
     "Ready to generate more leads and close more deals? Contact RealLanding for a free strategy session. We respond within 24 hours.",
   openGraph: {
-    title: "Contact Us | RealLanding — Get Your Free Strategy Session",
+    title: "Contact Us | RealLanding | Get Your Free Strategy Session",
     description:
       "Ready to generate more leads and close more deals? Contact RealLanding for a free strategy session. We respond within 24 hours.",
     url: "https://reallanding.com/contact",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | RealLanding — Get Your Free Strategy Session",
+    title: "Contact Us | RealLanding | Get Your Free Strategy Session",
     description:
       "Ready to generate more leads and close more deals? Contact RealLanding for a free strategy session. We respond within 24 hours.",
     images: ["https://reallanding.com/og-contact.jpg"],
